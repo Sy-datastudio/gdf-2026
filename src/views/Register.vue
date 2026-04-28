@@ -203,7 +203,7 @@ const form = ref({
 })
 
 const handleSubmit = async () => {
-  const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  const response = await fetch('https://formspree.io/f/mlgayanq', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(form.value)
