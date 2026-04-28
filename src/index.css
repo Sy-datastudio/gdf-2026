@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #1da282;
+  --color-primary-light: #24b895;
+  --color-background: #f1f1ee;
+  --color-background-accent: #e9e9e5; 
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #4A4A4A;
+  --color-accent: #dcdcd8;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-main font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  
+  .wave-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(29, 162, 130, 0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .grid-structure {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
