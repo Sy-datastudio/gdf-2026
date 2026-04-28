@@ -140,16 +140,16 @@
       </div>
     </section>
 
-    <!-- About Sustivion -->
+    <!-- About Sustivon -->
     <section class="py-32 px-6 border-b border-accent flex justify-center text-center">
       <div class="max-w-4xl space-y-12">
         <h2 class="text-xs font-bold uppercase tracking-[0.5em] text-primary">Organized By</h2>
-        <h3 class="text-4xl font-bold tracking-tighter">Sustivion</h3>
+        <h3 class="text-4xl font-bold tracking-tighter">Sustivon</h3>
         <p class="text-xl text-text-muted leading-relaxed font-light">
-          Sustivion is an <span class="font-semibold text-primary">IISc and NUS incubated</span> clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
+          Sustivon is an <span class="font-semibold text-primary">IISc and NUS incubated</span> clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
         </p>
         <p class="text-lg text-text-muted leading-relaxed opacity-80">
-          With a focus on maritime and aviation, Sustivion enables organizations to navigate complex regulatory environments and transition toward Net Zero through data-driven strategies.
+          With a focus on maritime and aviation, Sustivon enables organizations to navigate complex regulatory environments and transition toward Net Zero through data-driven strategies.
         </p>
         <div class="pt-8">
           <a href="https://www.sustivon.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary hover:gap-4 transition-all">
