@@ -8,7 +8,7 @@
         class="flex items-center gap-3 cursor-pointer"
       >
         <img 
-          src="/Sustivon-logo.jpeg" 
+          src="/Sustivon-logo.jpeg"  
           alt="Sustivon"
           class="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
         />
