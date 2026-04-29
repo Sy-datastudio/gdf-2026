@@ -53,7 +53,7 @@
           <div class="flex gap-4">
             <div class="text-primary shrink-0 opacity-40 py-1"><Info :size="20" :stroke-width="1.5" /></div>
             <p class="text-xs font-bold uppercase tracking-wider text-text-muted leading-relaxed">
-              "Our team will review and confirm participation details within 3-5 business days."
+              Our team will review and confirm participation details within 3-5 business days.
             </p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
