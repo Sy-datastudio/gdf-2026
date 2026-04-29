@@ -8,20 +8,25 @@
         class="flex items-center gap-3 cursor-pointer"
       >
         <img 
-          src="/sustivon-logo.jpeg" 
+          src="/Sustivon-logo.jpeg" 
           alt="Sustivon"
-          class="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+          class="h-9 w-auto object-contain hover:opacity-80 transition-opacity"
         />
 
-        <!-- Optional text (keep or remove) -->
+        <!-- Forum text -->
         <div class="hidden sm:flex flex-col leading-tight border-l border-primary/20 pl-3">
-          <span class="text-[10px] font-bold tracking-widest uppercase opacity-40">Global</span>
-          <span class="text-xs font-bold tracking-tight text-primary">Decarbonization Forum</span>
+          <span class="text-[10px] font-bold tracking-widest uppercase opacity-40">
+            Global
+          </span>
+          <span class="text-xs font-bold tracking-tight text-primary">
+            Decarbonization Forum
+          </span>
         </div>
       </button>
 
       <!-- NAV LINKS -->
       <div class="hidden md:flex items-center gap-8">
+        
         <button 
           @click="$emit('navigate', 'home')" 
           class="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
@@ -44,8 +49,8 @@
         >
           Register
         </button>
-      </div>
 
+      </div>
     </div>
   </nav>
 </template>
