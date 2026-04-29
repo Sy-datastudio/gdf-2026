@@ -237,7 +237,15 @@
 
 <script setup lang="ts">
 import { Leaf, Mail, ArrowRight, Zap, Database, Calendar, Clock, MapPin, ExternalLink, Globe, RefreshCw } from 'lucide-vue-next'
+import { ref, onMounted } from 'vue'
 
+const show = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    show.value = true
+  }, 50)
+})
 defineEmits<{
   navigate: [pageId: string]
 }>()
