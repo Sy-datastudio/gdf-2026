@@ -36,7 +36,7 @@
               @click="$emit('navigate', 'register')"
               class="px-8 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg"
             >
-              Request Invitation
+              Register
             </button>
 
             <!-- 🔥 FIXED EXPRESS INTEREST -->
@@ -67,24 +67,24 @@
       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
 
         <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.3em] text-white/50">Date</p>
-          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Date</p>
+          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             May 27, 2026
-          </h3>
+          </h4>
         </div>
 
         <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.3em] text-white/50">Time</p>
-          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Time</p>
+          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             10:30 AM CET<br/>2:00 PM IST
-          </h3>
+          </h4>
         </div>
 
         <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.3em] text-white/50">Location</p>
-          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Location</p>
+          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             Virtual (Zoom Webinar)
-          </h3>
+          </h4>
         </div>
 
       </div>
