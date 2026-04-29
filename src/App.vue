@@ -2,18 +2,15 @@
   <div class="min-h-screen flex flex-col">
     <Navbar :activePage="activePage" @navigate="showPage" />
     
-    <main class="flex-grow relative overflow-hidden">
-      
-      <!-- PAGE TRANSITION WRAPPER -->
-      <Transition name="fade-slide" mode="out-in">
-        <component 
-          :is="currentComponent" 
-          :key="activePage"
-          @navigate="showPage"
-        />
-      </Transition>
-
-    </main>
+<main class="flex-grow relative">
+  <Transition name="page" mode="out-in">
+    <div :key="activePage" class="w-full">
+      <Home v-if="activePage === 'home'" @navigate="showPage" />
+      <Speakers v-else-if="activePage === 'speakers'" @navigate="showPage" />
+      <Register v-else-if="activePage === 'register'" @navigate="showPage" />
+    </div>
+  </Transition>
+</main>
 
     <Footer @navigate="showPage" />
   </div>
