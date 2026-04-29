@@ -66,28 +66,35 @@
 
       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
 
-        <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Date</p>
-          <h7 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
-            May 27, 2026
-          </h7>
-        </div>
+      <div class="space-y-4 text-center">
 
-        <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Time</p>
-          <h10 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
-            10:30 AM CET<br/>2:00 PM IST<br/>4:30 PM SGT
-          </h10>
-        </div>
+  <!-- DATE (BIG) -->
+  <div class="space-y-3">
+    <p class="text-xs uppercase tracking-[0.6em] text-white/90">Date</p>
+    <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+      May 27, 2026
+    </h3>
+  </div>
 
-        <div class="space-y-4">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Location</p>
-          <h8 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
-            Virtual (Zoom Webinar)
-          </h8>
-        </div>
+  <!-- TIME (SMALLER) -->
+  <div class="space-y-3">
+    <p class="text-xs uppercase tracking-[0.6em] text-white/90">Time</p>
+    <p class="text-lg md:text-xl font-semibold text-primary">
+      10:30 AM CET<br/>
+      2:00 PM IST<br/>
+      4:30 PM SGT
+    </p>
+  </div>
 
-      </div>
+  <!-- LOCATION (SMALLER) -->
+  <div class="space-y-3">
+    <p class="text-xs uppercase tracking-[0.6em] text-white/90">Location</p>
+    <p class="text-lg md:text-xl font-semibold text-primary">
+      Virtual (Zoom Webinar)
+    </p>
+  </div>
+
+</div>
     </section>
 
     <!-- ABOUT -->
