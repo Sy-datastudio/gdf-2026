@@ -56,10 +56,19 @@
         </div>
 
         <!-- RIGHT IMAGE (UPDATED) -->
-        <div class="hidden md:block relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-black"></div>
-          <img src="/ship-Emissions-image.jpeg" class="rounded-xl opacity-85"/>
-        </div>
+<div class="hidden md:flex justify-end">
+  <div class="relative w-[85%] max-w-[520px]">
+
+    <!-- soft fade so it blends -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent rounded-xl"></div>
+
+    <img 
+      src="/ship-Emissions-image.jpeg"
+      class="rounded-xl opacity-90 shadow-2xl"
+    />
+
+  </div>
+</div>
 
       </div>
     </section>
