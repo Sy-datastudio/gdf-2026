@@ -195,6 +195,46 @@
       </div>
     </section>
 
+    <!-- ORGANIZED BY -->
+<section class="py-40 px-6 border-t border-white/10 text-center">
+
+  <div class="max-w-4xl mx-auto space-y-10">
+
+    <!-- Label -->
+    <div class="text-xs uppercase tracking-[0.4em] text-primary">
+      Organized By
+    </div>
+
+    <!-- Brand -->
+    <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight">
+      Sustivon
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg text-white/80 leading-relaxed">
+      Sustivon is an <span class="text-primary font-semibold">IISc and NUS incubated</span> clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
+    </p>
+
+    <p class="text-lg text-white/60 leading-relaxed">
+      With a focus on maritime and aviation, Sustivon enables organizations to navigate complex regulatory environments and transition toward Net Zero through data-driven strategies.
+    </p>
+
+    <!-- Link -->
+    <div class="pt-6">
+      <a 
+        href="https://sustivon.com" 
+        target="_blank"
+        class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.3em] text-primary hover:opacity-80 transition"
+      >
+        Visit Sustivon.com
+        <span class="text-xs">↗</span>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
     <!-- CTA -->
     <section class="py-40 px-6 border-t border-white/10 text-center">
       <div class="max-w-3xl mx-auto space-y-10">
@@ -210,7 +250,12 @@
         >
           Register
         </button>
-
+      <button
+        class="px-10 py-5 border border-primary text-primary font-bold uppercase tracking-widest rounded-lg hover:bg-primary/10 flex items-center gap-2"
+      >
+        Contact Organizer
+        <Mail :size="16" />
+      </button>
       </div>
     </section>
 
