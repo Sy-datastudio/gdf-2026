@@ -100,53 +100,37 @@
       </div>
     </section>
 
-    <!-- SPEAKER + PROGRAMME -->
-    <section class="py-32 px-6">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+<!-- PROGRAMME TABLE -->
+<div>
+  <h3 class="text-4xl font-bold mb-8">Programme Overview</h3>
 
-        <!-- SPEAKER -->
-        <div>
-          <h3 class="text-4xl font-bold mb-6">Speaker Profile</h3>
+  <div class="border border-accent rounded-lg overflow-hidden">
 
-          <ul class="space-y-3">
-            <li v-for="(it,i) in speakerProfile" :key="i">
-              • {{ it }}
-            </li>
-          </ul>
-        </div>
+    <!-- HEADER -->
+    <div class="grid grid-cols-2 bg-background-accent border-b border-accent text-xs uppercase tracking-widest font-bold text-text-muted">
+      <div class="p-4">Duration</div>
+      <div class="p-4">Session</div>
+    </div>
 
-        <!-- PROGRAMME TABLE -->
-        <div>
-          <h3 class="text-4xl font-bold mb-8">Programme Overview</h3>
+    <!-- ROWS -->
+    <div
+      v-for="(p,i) in programme"
+      :key="i"
+      class="grid grid-cols-2 border-b border-accent last:border-none text-sm"
+    >
 
-          <div class="border border-accent rounded-lg overflow-hidden">
+      <div class="p-4 text-primary font-semibold">
+        {{ p.time }}
+      </div>
 
-            <!-- HEADER -->
-            <div class="grid grid-cols-3 bg-background-accent border-b border-accent text-xs uppercase tracking-widest font-bold text-text-muted">
-              <div class="p-4">Step</div>
-              <div class="p-4">Duration</div>
-              <div class="p-4">Session</div>
-            </div>
+      <div class="p-4">
+        {{ p.label }}
+      </div>
 
-            <!-- ROWS -->
-            <div v-for="(p,i) in programme" :key="i"
-              class="grid grid-cols-3 border-b border-accent last:border-none text-sm">
+    </div>
 
-              <div class="p-4 text-primary font-semibold">
-                {{ i+1 }}
-              </div>
-
-              <div class="p-4 text-text-muted">
-                {{ p.time }}
-              </div>
-
-              <div class="p-4">
-                {{ p.label }}
-              </div>
-
-            </div>
-
-          </div>
+  </div>
+</div>
 
           <!-- FOOTNOTE -->
           <div class="mt-6 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70">
