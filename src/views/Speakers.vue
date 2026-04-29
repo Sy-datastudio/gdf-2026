@@ -28,7 +28,6 @@
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
 
         <div class="space-y-12">
-
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Setting</h2>
             <h3 class="text-4xl font-bold mt-2">Focus & Context</h3>
@@ -50,11 +49,9 @@
               </li>
             </ul>
           </div>
-
         </div>
 
         <div class="space-y-12">
-
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Mission</h2>
             <h3 class="text-4xl font-bold mt-2">Intended Outcomes</h3>
@@ -73,7 +70,6 @@
 
             </div>
           </div>
-
         </div>
 
       </div>
@@ -100,45 +96,53 @@
       </div>
     </section>
 
-<!-- PROGRAMME TABLE -->
-<div>
-  <h3 class="text-4xl font-bold mb-8">Programme Overview</h3>
+    <!-- PROGRAMME TIMELINE -->
+    <section class="py-32 px-6">
+      <div class="max-w-4xl mx-auto">
 
-  <div class="border border-accent rounded-lg overflow-hidden">
+        <h3 class="text-4xl font-bold mb-12 text-center">
+          Programme Overview
+        </h3>
 
-    <!-- HEADER -->
-    <div class="grid grid-cols-2 bg-background-accent border-b border-accent text-xs uppercase tracking-widest font-bold text-text-muted">
-      <div class="p-4">Duration</div>
-      <div class="p-4">Session</div>
-    </div>
+        <div class="relative">
 
-    <!-- ROWS -->
-    <div
-      v-for="(p,i) in programme"
-      :key="i"
-      class="grid grid-cols-2 border-b border-accent last:border-none text-sm"
-    >
+          <!-- vertical line -->
+          <div class="absolute left-4 top-0 bottom-0 w-[2px] bg-primary/20"></div>
 
-      <div class="p-4 text-primary font-semibold">
-        {{ p.time }}
-      </div>
+          <!-- items -->
+          <div class="space-y-10">
 
-      <div class="p-4">
-        {{ p.label }}
-      </div>
+            <div v-for="(p,i) in programme" :key="i" class="relative flex gap-6">
 
-    </div>
+              <!-- dot -->
+              <div class="relative z-10 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black font-bold text-xs">
+                {{ i+1 }}
+              </div>
 
-  </div>
-</div>
+              <!-- content -->
+              <div class="flex-1 p-6 border border-accent rounded-lg hover:border-primary/30 transition">
 
-          <!-- FOOTNOTE -->
-          <div class="mt-6 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70">
-            <div>Format: Virtual Zoom webinar</div>
-            <div>Style: Moderated panel discussions</div>
-            <div>Group: Small format for depth</div>
+                <div class="text-primary text-sm font-semibold mb-1">
+                  {{ p.time }}
+                </div>
+
+                <div class="text-lg font-medium">
+                  {{ p.label }}
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
+        </div>
+
+        <!-- FOOTNOTE -->
+        <div class="mt-10 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70 text-center">
+          <div>Format: Virtual Zoom webinar</div>
+          <div>Style: Moderated panel discussions</div>
+          <div>Group: Small format for depth</div>
         </div>
 
       </div>
@@ -200,13 +204,6 @@ const whyParticipate = [
   'Cross-sector engagement',
   'Policy + industry insights',
   'Actionable outcomes',
-]
-
-const speakerProfile = [
-  'Senior leadership experience',
-  'Expertise in climate policy',
-  'Transport / maritime / aviation background',
-  'AI / data / compliance systems',
 ]
 
 const programme = [
