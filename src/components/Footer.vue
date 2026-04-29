@@ -17,7 +17,7 @@
         <ul class="space-y-3">
           <li><button @click="$emit('navigate', 'home')" class="text-sm hover:text-primary transition-colors cursor-pointer text-left">Home</button></li>
           <li><button @click="$emit('navigate', 'speakers')" class="text-sm hover:text-primary transition-colors cursor-pointer text-left">Invited Speakers</button></li>
-          <li><button @click="$emit('navigate', 'register')" class="text-sm hover:text-primary transition-colors cursor-pointer text-left">Request Invitation</button></li>
+          <li><button @click="$emit('navigate', 'register')" class="text-sm hover:text-primary transition-colors cursor-pointer text-left">Register</button></li>
         </ul>
       </div>
 
@@ -40,7 +40,7 @@
     </div>
 
     <div class="max-w-7xl mx-auto pt-8 border-t border-accent/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text-muted">
-      <p>© 2026 Sustivion. All rights reserved.</p>
+      <p>© 2026 Sustivon. All rights reserved.</p>
       <p class="opacity-50">Where Sustainability Meets Innovation</p>
     </div>
   </footer>
