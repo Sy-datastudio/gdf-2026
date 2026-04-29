@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
-npm install @fontsource/inter @fontsource/inter-tight
 
 createApp(App).mount('#app')
 import '@fontsource/inter/400.css'
