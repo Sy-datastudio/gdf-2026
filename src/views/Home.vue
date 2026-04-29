@@ -4,7 +4,7 @@
     <!-- 🌍 GLOBAL BACKGROUND IMAGE -->
     <div class="fixed inset-0 -z-10">
       <img 
-        src="/dark-setting-globe.jpeg"
+        src="/dark-setting-globe.jpg"
         class="w-full h-full object-cover"
       />
 
