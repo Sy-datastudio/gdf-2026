@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20">
+  <div class=""pt-20 transition-all duration-500"">
     <!-- Hero Section -->
     <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden grid-structure">
       <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'20\' viewBox=\'0 0 100 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10 Q 25 0 50 10 T 100 10\' stroke=\'%231da282\' fill=\'none\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-repeat: repeat;"></div>
