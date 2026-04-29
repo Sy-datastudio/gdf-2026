@@ -4,7 +4,7 @@
     <!-- BACKGROUND -->
     <div class="fixed inset-0 -z-10">
       <img src="/dark-setting-globe.jpg" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-black/60"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80"></div>
     </div>
 
@@ -13,6 +13,7 @@
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <div class="space-y-8">
+
           <div class="text-xs uppercase tracking-[0.4em] text-primary flex items-center gap-3">
             <span class="w-10 h-[1px] bg-primary"></span>
             World Environment Day Edition
@@ -26,32 +27,35 @@
           </h1>
 
           <p class="text-lg text-white/80 max-w-xl">
-            A high-signal convening of leaders shaping the next phase of climate execution.
+            A cross-sector dialogue shaping the future of climate action.
           </p>
 
-          <div class="flex gap-4">
-            <button
-              @click="$emit('navigate', 'register')"
-              class="px-8 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg"
-            >
+          <!-- ICON STRIP -->
+          <div class="flex gap-6 pt-4">
+            <div v-for="(item,i) in thematicIcons" :key="i" class="flex flex-col items-center gap-2">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <component :is="item.icon" :size="22"/>
+              </div>
+              <span class="text-[10px] tracking-widest text-white/50">{{ item.label }}</span>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-4">
+            <button @click="$emit('navigate','register')"
+              class="px-8 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
               Register
             </button>
 
             <button
-              @click="$emit('navigate', 'register')"
-              class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10"
-            >
+              class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
               Express Interest
             </button>
           </div>
+
         </div>
 
-        <!-- IMAGE -->
         <div class="hidden md:flex justify-end">
-          <div class="relative w-[85%] max-w-[520px]">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent rounded-xl"></div>
-            <img src="/ship-Emissions-image.jpeg" class="rounded-xl opacity-90 shadow-2xl border border-white/10"/>
-          </div>
+          <img src="/ship-Emissions-image.jpeg" class="rounded-xl opacity-90 shadow-2xl border border-white/10 w-[85%]"/>
         </div>
 
       </div>
@@ -61,65 +65,83 @@
     <section class="py-24 px-6 border-y border-white/10">
       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
 
-        <div class="space-y-3">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Date</p>
-          <h3 class="text-4xl md:text-5xl font-bold text-primary">
-            May 27, 2026
-          </h3>
+        <div>
+          <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
+          <h3 class="text-4xl font-bold text-primary">May 27, 2026</h3>
         </div>
 
-        <div class="space-y-3">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Time</p>
-          <p class="text-lg md:text-xl font-semibold text-primary">
-            10:30 AM CET<br/>
-            2:00 PM IST<br/>
-            4:30 PM SGT
+        <div>
+          <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
+          <p class="text-lg text-primary font-semibold">
+            10:30 AM CET<br/>2:00 PM IST<br/>4:30 PM SGT
           </p>
         </div>
 
-        <div class="space-y-3">
-          <p class="text-xs uppercase tracking-[0.6em] text-white/90">Location</p>
-          <p class="text-lg md:text-xl font-semibold text-primary">
-            Virtual (Zoom Webinar)
-          </p>
+        <div>
+          <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Location</p>
+          <p class="text-lg text-primary font-semibold">Virtual (Zoom Webinar)</p>
         </div>
 
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="py-40 px-6 border-t border-white/10 text-center">
-      <div class="max-w-6xl mx-auto space-y-8">
-        <h2 class="text-xs uppercase tracking-[0.4em] text-primary">About</h2>
-
+    <section class="py-32 px-6 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
         <h3 class="text-4xl font-bold">
           A platform for <span class="text-primary">strategic climate dialogue</span>
         </h3>
-
-        <p class="text-white/70 max-w-3xl mx-auto">
-          The Global Decarbonization Forum 2026 convenes policymakers, operators, and system leaders to move beyond commitments and toward execution.
+        <p class="text-white/70">
+          The Global Decarbonization Forum 2026 convenes leaders across policy, industry, and academia to move from commitment to execution.
         </p>
       </div>
     </section>
 
+    <!-- WHY THIS MATTERS -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center space-y-4">
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
+          <h3 class="text-5xl font-black">
+            Decarbonization is entering an <span class="text-primary">enforcement era</span>
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div v-for="(card,i) in contextCards" :key="i"
+            class="p-10 bg-white/5 border border-white/10 rounded-xl">
+
+            <component :is="card.icon" class="text-primary mb-6" :size="28"/>
+
+            <h4 class="text-xl font-bold mb-3">{{ card.title }}</h4>
+            <p class="text-white/70 text-sm">{{ card.text }}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- AGENDA -->
-    <section class="py-40 px-6 border-y border-white/10">
+    <section class="py-32 px-6">
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div>
-          <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Agenda</h2>
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
           <h3 class="text-5xl font-black">Curated Discussions</h3>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-          <div v-for="(panel, i) in panels" :key="i"
-               class="p-10 bg-white/5 border border-white/10 rounded-xl">
+          <div v-for="(panel,i) in panels" :key="i"
+            class="p-10 bg-white/5 border border-white/10 rounded-xl">
 
             <h4 class="text-2xl font-bold">{{ panel.title }}</h4>
             <p class="text-primary text-xs uppercase mt-2">{{ panel.subtitle }}</p>
 
-            <ul class="space-y-2 mt-4 text-white/70 text-sm">
-              <li v-for="(p, j) in panel.points" :key="j">• {{ p }}</li>
+            <ul class="mt-4 text-white/70 text-sm space-y-2">
+              <li v-for="(p,j) in panel.points" :key="j">• {{ p }}</li>
             </ul>
 
           </div>
@@ -128,52 +150,41 @@
       </div>
     </section>
 
-    <!-- GLOBAL LEADERS -->
-    <section class="py-40 px-6">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+    <!-- SCHEDULE -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-5xl mx-auto space-y-12">
 
-        <div class="space-y-8">
-          <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Panel</h2>
-          <h3 class="text-5xl font-black">
-            <span class="text-white">Global</span>
-            <span class="text-primary"> Leaders</span>
-          </h3>
-          <p class="text-white/70">
-            A tightly curated group of decision-makers across maritime operations and climate systems.
-          </p>
-        </div>
+        <h3 class="text-3xl font-bold text-center">Schedule</h3>
 
-        <div class="grid grid-cols-2 gap-8">
-          <div class="p-8 bg-white/5 border border-white/10 rounded-2xl">Curated Leadership</div>
-          <div class="p-8 bg-white/5 border border-white/10 rounded-2xl">Invitation Only</div>
-          <div class="p-8 bg-white/5 border border-white/10 rounded-2xl">High-Signal Dialogue</div>
-          <div class="p-8 bg-white/5 border border-white/10 rounded-2xl">Global Perspective</div>
+        <div class="space-y-6">
+          <div v-for="(item,i) in schedule" :key="i"
+            class="flex justify-between border-b border-white/10 pb-3">
+
+            <span class="text-primary font-semibold">{{ item.time }}</span>
+            <span class="text-white/70">{{ item.label }}</span>
+
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- BIG CTA -->
-    <section class="py-40 px-6 border-t border-white/10 text-center">
-      <div class="max-w-4xl mx-auto space-y-12">
+    <!-- CTA -->
+    <section class="py-32 px-6 text-center">
+      <div class="max-w-4xl mx-auto space-y-10">
 
-        <h2 class="text-4xl md:text-6xl font-black leading-tight">
+        <h3 class="text-5xl font-black">
           Join a high-level conversation shaping
           <span class="text-primary"> climate action.</span>
-        </h2>
+        </h3>
 
-        <div class="flex flex-col md:flex-row gap-6 justify-center">
-          <button
-            @click="$emit('navigate', 'register')"
-            class="px-10 py-5 bg-primary text-black font-bold uppercase rounded-lg flex items-center gap-2"
-          >
+        <div class="flex flex-wrap justify-center gap-6">
+          <button class="px-10 py-5 bg-primary text-black font-bold rounded-lg">
             Request Invitation
-            <ArrowRight :size="16" />
           </button>
 
-          <button class="px-10 py-5 border border-primary text-primary font-bold uppercase rounded-lg flex items-center gap-2">
+          <button class="px-10 py-5 border border-primary text-primary font-bold rounded-lg">
             Contact Organizer
-            <Mail :size="16" />
           </button>
         </div>
 
@@ -181,23 +192,18 @@
     </section>
 
     <!-- ORGANIZED BY -->
-    <section class="py-40 px-6 border-t border-white/10 text-center">
-      <div class="max-w-4xl mx-auto space-y-10">
+    <section class="py-32 px-6 border-t border-white/10 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
 
-        <div class="text-xs uppercase tracking-[0.4em] text-primary">
-          Organized By
-        </div>
-
-        <h2 class="text-4xl md:text-5xl font-black">
-          Sustivon
-        </h2>
+        <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Organized By</h2>
+        <h3 class="text-4xl font-bold">Sustivon</h3>
 
         <p class="text-white/80">
-          Sustivon is an <span class="text-primary font-semibold">IISc and NUS incubated</span> clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
+          IISc and NUS incubated clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
         </p>
 
         <p class="text-white/60">
-          With a focus on maritime and aviation, Sustivon enables organizations to navigate complex regulatory environments and transition toward Net Zero through data-driven strategies.
+          Focused on maritime and aviation, enabling Net Zero transitions through data-driven strategies.
         </p>
 
       </div>
@@ -207,11 +213,22 @@
 </template>
 
 <script setup lang="ts">
-import { Mail, ArrowRight } from 'lucide-vue-next'
+import { Leaf, Globe, Zap, RefreshCw } from 'lucide-vue-next'
 
-defineEmits<{
-  navigate: [pageId: string]
-}>()
+defineEmits<{ navigate: [pageId: string] }>()
+
+const thematicIcons = [
+  { icon: Leaf, label: 'SUSTAINABILITY' },
+  { icon: Globe, label: 'GLOBAL IMPACT' },
+  { icon: Zap, label: 'CLEAN ENERGY' },
+  { icon: RefreshCw, label: 'NET ZERO' },
+]
+
+const contextCards = [
+  { icon: Globe, title: 'Global Acceleration', text: 'Regulatory frameworks are accelerating globally.' },
+  { icon: Zap, title: 'Structural Pressure', text: 'Transport sectors face transition pressure.' },
+  { icon: Globe, title: 'Data Advantage', text: 'Competitive advantage is data-driven.' },
+]
 
 const panels = [
   {
@@ -224,5 +241,13 @@ const panels = [
     subtitle: 'Data-Driven Execution',
     points: ['Real-time emissions', 'AI optimization', 'Decision systems'],
   },
+]
+
+const schedule = [
+  { time: '10 min', label: 'Welcome & framing' },
+  { time: '35 min', label: 'Panel 1' },
+  { time: '5 min', label: 'Transition' },
+  { time: '35–45 min', label: 'Panel 2' },
+  { time: '5 min', label: 'Closing' },
 ]
 </script>
