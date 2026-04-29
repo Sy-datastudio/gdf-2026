@@ -1,217 +1,235 @@
 <template>
   <div class="pt-20">
-    <!-- Header -->
+
+    <!-- HEADER -->
     <header class="py-32 px-6 bg-background-accent border-b border-accent grid-structure">
       <div class="max-w-7xl mx-auto space-y-8">
+
         <div class="flex items-center gap-3">
           <span class="w-12 h-[1px] bg-primary"></span>
-          <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary">Global Decarbonization Forum 2026</span>
+          <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            Global Decarbonization Forum 2026
+          </span>
         </div>
+
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
           INVITATION TO <span class="text-primary">CONTRIBUTE</span>
         </h1>
-        <p class="text-xl text-text-muted font-light max-w-3xl leading-relaxed">
-          This forum is designed as a focused, high-level dialogue at the intersection of policy, industry, and research.
+
+        <p class="text-xl text-text-muted max-w-3xl">
+          A focused, high-level dialogue at the intersection of policy, industry, and research.
         </p>
+
       </div>
     </header>
 
-    <!-- Context & Audience -->
+    <!-- CONTEXT + AUDIENCE -->
     <section class="py-32 px-6">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+
         <div class="space-y-12">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">The Setting</h2>
-            <h3 class="text-4xl font-bold tracking-tight">Focus & Context</h3>
+
+          <div>
+            <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Setting</h2>
+            <h3 class="text-4xl font-bold mt-2">Focus & Context</h3>
           </div>
-          <p class="text-lg text-text-muted leading-relaxed font-light">
-            It brings together a curated group of stakeholders to explore the strategic and operational dimensions of decarbonization, moving beyond pledges into tangible technological and policy frameworks.
+
+          <p class="text-lg text-text-muted">
+            A curated group of stakeholders exploring actionable decarbonization pathways.
           </p>
 
-          <div class="bg-background-accent p-8 space-y-6 border border-accent">
-            <h4 class="text-sm font-bold uppercase tracking-widest text-primary flex items-center gap-3">
+          <div class="bg-background-accent p-8 border border-accent space-y-6">
+            <h4 class="text-sm uppercase tracking-widest text-primary flex gap-2 items-center">
               <Users :size="18" /> Expected Audience
             </h4>
-            <ul class="space-y-4">
-              <li v-for="(item, i) in audience" :key="i" class="flex gap-4 text-sm text-text-muted">
-                <span class="text-primary font-bold opacity-30">0{{ i + 1 }}</span>
+
+            <ul class="space-y-3">
+              <li v-for="(item,i) in audience" :key="i" class="flex gap-3 text-sm text-text-muted">
+                <span class="text-primary opacity-40">0{{ i+1 }}</span>
                 {{ item }}
               </li>
             </ul>
           </div>
+
         </div>
 
         <div class="space-y-12">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Mission</h2>
-            <h3 class="text-4xl font-bold tracking-tight">Intended Outcomes</h3>
+
+          <div>
+            <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Mission</h2>
+            <h3 class="text-4xl font-bold mt-2">Intended Outcomes</h3>
           </div>
-          <div class="grid grid-cols-1 gap-6">
-            <div
-              v-for="(outcome, i) in outcomes"
-              :key="i"
-              class="flex gap-6 p-6 border border-accent hover:border-primary/20 transition-colors"
-            >
-              <div class="text-primary shrink-0">
-                <component :is="outcome.icon" :size="20" />
+
+          <div class="space-y-6">
+            <div v-for="(o,i) in outcomes" :key="i"
+              class="flex gap-4 p-6 border border-accent hover:border-primary/20">
+
+              <component :is="o.icon" class="text-primary" :size="20" />
+
+              <div>
+                <h5 class="font-bold text-sm uppercase">{{ o.title }}</h5>
+                <p class="text-sm text-text-muted">{{ o.desc }}</p>
               </div>
-              <div class="space-y-2">
-                <h5 class="font-bold text-sm uppercase tracking-wider">{{ outcome.title }}</h5>
-                <p class="text-sm text-text-muted leading-relaxed font-light">{{ outcome.desc }}</p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY PARTICIPATE -->
+    <section class="py-32 px-6 bg-primary text-background">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+
+        <div>
+          <h3 class="text-5xl font-black uppercase">Why Participate?</h3>
+        </div>
+
+        <div class="space-y-4">
+          <div v-for="(item,i) in whyParticipate" :key="i"
+            class="flex gap-4 p-6 border border-accent/20 rounded-lg">
+
+            <CheckCircle :size="18" />
+            <span>{{ item }}</span>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SPEAKER + PROGRAMME -->
+    <section class="py-32 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+
+        <!-- SPEAKER -->
+        <div>
+          <h3 class="text-4xl font-bold mb-6">Speaker Profile</h3>
+
+          <ul class="space-y-3">
+            <li v-for="(it,i) in speakerProfile" :key="i">
+              • {{ it }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- PROGRAMME TABLE -->
+        <div>
+          <h3 class="text-4xl font-bold mb-8">Programme Overview</h3>
+
+          <div class="border border-accent rounded-lg overflow-hidden">
+
+            <!-- HEADER -->
+            <div class="grid grid-cols-3 bg-background-accent border-b border-accent text-xs uppercase tracking-widest font-bold text-text-muted">
+              <div class="p-4">Step</div>
+              <div class="p-4">Duration</div>
+              <div class="p-4">Session</div>
+            </div>
+
+            <!-- ROWS -->
+            <div v-for="(p,i) in programme" :key="i"
+              class="grid grid-cols-3 border-b border-accent last:border-none text-sm">
+
+              <div class="p-4 text-primary font-semibold">
+                {{ i+1 }}
               </div>
+
+              <div class="p-4 text-text-muted">
+                {{ p.time }}
+              </div>
+
+              <div class="p-4">
+                {{ p.label }}
+              </div>
+
             </div>
+
           </div>
+
+          <!-- FOOTNOTE -->
+          <div class="mt-6 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70">
+            <div>Format: Virtual Zoom webinar</div>
+            <div>Style: Moderated panel discussions</div>
+            <div>Group: Small format for depth</div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Why Participate -->
-    <section class="py-32 px-6 bg-primary text-background relative overflow-hidden">
-      <div class="absolute inset-0 grid-structure opacity-5"></div>
-      <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        <div class="space-y-8">
-          <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-accent">Strategic Impact</h2>
-          <h3 class="text-5xl font-black tracking-tight leading-none uppercase">Why Participate?</h3>
-          <p class="text-xl text-accent/60 leading-relaxed font-light">
-            Your expertise will directly contribute to the formation of actionable outcomes for sectors facing critical transition timelines.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 gap-4">
-          <div
-            v-for="(item, i) in whyParticipate"
-            :key="i"
-            class="flex items-center gap-6 p-6 border border-accent/20 bg-background/5 backdrop-blur-sm group hover:bg-background/10 transition-all rounded-[8px]"
-          >
-            <CheckCircle class="text-accent group-hover:scale-110 transition-transform" :size="20" />
-            <span class="text-sm font-medium tracking-tight opacity-90">{{ item }}</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Speaker Profile & Programme -->
-    <section class="py-32 px-6 bg-background-accent">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-        <div class="space-y-12">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Selection</h2>
-            <h3 class="text-4xl font-bold tracking-tight">Speaker Profile</h3>
-          </div>
-          <div class="space-y-4">
-            <div
-              v-for="(it, i) in speakerProfile"
-              :key="i"
-              class="flex items-center gap-4 py-4 border-b border-accent"
-            >
-              <span class="w-2 h-2 rounded-full bg-primary opacity-30"></span>
-              <span class="text-sm font-semibold text-text-muted">{{ it }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-12">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Structure</h2>
-            <h3 class="text-4xl font-bold tracking-tight">Programme Overview</h3>
-          </div>
-          <div class="space-y-4 bg-background p-10 border border-accent rounded-[8px]">
-            <div
-              v-for="(it, i) in programme"
-              :key="i"
-              class="flex items-center gap-6 py-3"
-            >
-              <span class="text-xs font-bold text-primary opacity-40">STEP {{ i + 1 }}</span>
-              <span class="text-sm font-medium">{{ it }}</span>
-            </div>
-            <div class="mt-12 pt-10 border-t border-accent flex flex-col gap-4 text-xs font-bold uppercase tracking-widest opacity-60">
-              <span>Format: Virtual Zoom webinar</span>
-              <span>Style: Moderated panel discussions</span>
-              <span>Group: Small format for depth</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Closing CTA -->
+    <!-- CTA -->
     <section class="py-40 px-6 text-center wave-pattern">
-      <div class="max-w-2xl mx-auto space-y-12">
-        <h3 class="text-4xl md:text-5xl font-black tracking-tight leading-none uppercase">
-          We would be honored to have your
-          <span class="text-primary underline underline-offset-8 decoration-accent">participation</span>
-          in this dialogue.
+      <div class="space-y-8">
+
+        <h3 class="text-4xl font-black uppercase">
+          We would be honored to have your participation
         </h3>
-        <div class="flex flex-wrap justify-center gap-6">
-<div class="mt-6 flex flex-col md:flex-row gap-4 items-center justify-center">
 
-  <!-- PRIMARY -->
-  <button
-    @click="$emit('navigate', 'register')"
-    class="w-[240px] px-10 py-4 bg-primary text-black font-bold tracking-widest uppercase text-xs rounded-[8px] flex items-center justify-center gap-3 hover:opacity-90 transition-all"
-  >
-    Confirm Interest
-    <CheckCircle :size="14" />
-  </button>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
 
-  <!-- SECONDARY -->
-  <a href="mailto:syeda@sustivon.com" class="w-[240px]">
-    <button
-      class="w-full px-10 py-4 border border-primary text-primary font-bold tracking-widest uppercase text-xs rounded-[8px] flex items-center justify-center gap-3 hover:bg-primary/10 transition-all"
-    >
-      Contact Organizer
-      <Mail :size="14" />
-    </button>
-  </a>
+          <button
+            @click="$emit('navigate','register')"
+            class="w-[240px] px-10 py-4 bg-primary text-black font-bold uppercase rounded-lg"
+          >
+            Confirm Interest
+          </button>
 
-</div>
+          <a
+            href="mailto:syeda@sustivon.com"
+            class="w-[240px] px-10 py-4 border border-primary text-primary font-bold uppercase rounded-lg text-center"
+          >
+            Contact Organizer
           </a>
+
         </div>
-        </div>
+
       </div>
     </section>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { Mail, CheckCircle, Info, Target, Users, Layout } from 'lucide-vue-next'
+import { CheckCircle, Users, Info, Target, Layout } from 'lucide-vue-next'
 
-defineEmits<{
-  navigate: [pageId: string]
-}>()
+defineEmits<{ navigate: [pageId: string] }>()
 
 const audience = [
-  'Policymakers and regulatory stakeholders (EU and Asia)',
-  'Industry leaders in maritime, aviation, and logistics',
-  'Climate technology and data solution providers',
-  'Academic researchers and sustainability experts',
+  'Policymakers and regulatory stakeholders',
+  'Industry leaders in maritime & aviation',
+  'Climate tech providers',
+  'Academic researchers',
 ]
 
 const outcomes = [
-  { icon: Target, title: 'Cross-sector Alignment', desc: 'Alignment on practical decarbonization pathways across different sectors.' },
-  { icon: Info, title: 'Insight Exchange', desc: 'Exchange of practical insights across regions and specialized industries.' },
-  { icon: Layout, title: 'Opportunity Identification', desc: 'Identification of emerging opportunities and navigation of new challenges.' },
-  { icon: Users, title: 'Strengthening Collaboration', desc: 'Building bridges between policy makers, industry leaders, and researchers.' },
+  { icon: Target, title: 'Alignment', desc: 'Cross-sector alignment on pathways' },
+  { icon: Info, title: 'Insights', desc: 'Exchange practical insights' },
+  { icon: Layout, title: 'Opportunities', desc: 'Identify emerging opportunities' },
+  { icon: Users, title: 'Collaboration', desc: 'Strengthen collaboration' },
 ]
 
 const whyParticipate = [
-  'Contribute to a high-level, curated dialogue',
-  'Engage with stakeholders across multiple domains',
-  'Share perspectives on evolving regulatory landscapes',
-  'Be part of a platform focused on actionable outcomes',
+  'High-level curated dialogue',
+  'Cross-sector engagement',
+  'Policy + industry insights',
+  'Actionable outcomes',
 ]
 
 const speakerProfile = [
   'Senior leadership experience',
-  'Expertise in decarbonization or climate policy',
-  'Background in maritime, aviation, or transport',
-  'Experience in data, AI, or compliance systems',
+  'Expertise in climate policy',
+  'Transport / maritime / aviation background',
+  'AI / data / compliance systems',
 ]
 
 const programme = [
-  'Welcome & framing – 10 min',
-  'Panel 1: Regulatory & economic context – 35 min',
-  'Transition – 5 min',
-  'Panel 2: Data & AI in execution – 35–45 min',
-  'Closing reflections – 5 min',
+  { time: '10 min', label: 'Welcome & framing' },
+  { time: '35 min', label: 'Panel 1: Regulatory context' },
+  { time: '5 min', label: 'Transition' },
+  { time: '35–45 min', label: 'Panel 2: Data & AI' },
+  { time: '5 min', label: 'Closing reflections' },
 ]
 </script>
