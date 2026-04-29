@@ -10,7 +10,7 @@
         <img 
           src="/Sustivon-logo.jpeg" 
           alt="Sustivon"
-          class="h-9 w-auto object-contain hover:opacity-80 transition-opacity"
+          class="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
         />
 
         <!-- Forum text -->
