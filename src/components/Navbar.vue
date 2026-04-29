@@ -9,7 +9,7 @@
         <div class="flex flex-col">
           <div class="flex items-center gap-1.5 text-primary mb-1">
             <Leaf :size="14" fill="currentColor" />
-            <span class="text-xs font-black uppercase tracking-tighter">Sustivion</span>
+            <span class="text-xs font-black uppercase tracking-tighter">Sustivon</span>
           </div>
           <div class="flex flex-col leading-tight border-l border-primary/20 pl-2">
             <span class="text-[10px] font-bold tracking-widest uppercase opacity-40">Global</span>
