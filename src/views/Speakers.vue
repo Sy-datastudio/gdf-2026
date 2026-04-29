@@ -148,11 +148,14 @@
           >
             Confirm Interest <CheckCircle :size="14" />
           </button>
-          <button
-            class="px-10 py-5 border border-primary/20 text-primary font-bold tracking-widest uppercase text-xs hover:bg-primary/10 transition-all flex items-center gap-3 rounded-[8px] cursor-pointer"
-          >
-            Contact Organizer <Mail :size="14" />
-          </button>
+<!-- CONTACT BUTTON -->
+        <div class="mt-6">
+          <a href="mailto:syeda@sustivon.com">
+            <button class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
+              Contact Organizer
+            </button>
+          </a>
+        </div>
         </div>
       </div>
     </section>
