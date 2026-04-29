@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20 relative text-white overflow-hidden">
 
-    <!-- 🌍 GLOBAL BACKGROUND -->
+    <!-- 🌍 BACKGROUND -->
     <div class="fixed inset-0 -z-10">
       <img src="/dark-setting-globe.jpg" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black/55"></div>
@@ -13,7 +13,6 @@
 
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
 
-        <!-- LEFT -->
         <div class="space-y-8">
 
           <div class="text-xs uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -22,14 +21,10 @@
           </div>
 
           <h1 class="text-5xl md:text-7xl font-black leading-[0.9] text-white">
-            <span class="text-white/90">GLOBAL</span> <br/>
-            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">
-              DECARBONIZATION
-            </span><br/>
-            <span class="text-white/90">FORUM</span>
-            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">
-              2026
-            </span>
+            <span class="text-white">GLOBAL</span> <br/>
+            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">DECARBONIZATION</span><br/>
+            <span class="text-white">FORUM</span>
+            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">2026</span>
           </h1>
 
           <p class="text-lg text-white/80 max-w-xl">
@@ -44,9 +39,10 @@
               Request Invitation
             </button>
 
+            <!-- 🔥 FIXED EXPRESS INTEREST -->
             <button
               @click="$emit('navigate', 'register')"
-              class="px-8 py-4 border border-white/20 text-white text-xs uppercase rounded-lg hover:bg-white/5"
+              class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10"
             >
               Express Interest
             </button>
@@ -65,32 +61,33 @@
       </div>
     </section>
 
-    <!-- EVENT DETAILS BAND -->
+    <!-- EVENT BAND -->
     <section class="py-24 px-6 border-t border-white/10 border-b border-white/10">
 
       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.3em] text-white/50">Date</p>
-          <h3 class="text-3xl md:text-4xl font-bold text-primary">May 27, 2026</h3>
+          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+            May 27, 2026
+          </h3>
         </div>
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.3em] text-white/50">Time</p>
-          <h3 class="text-3xl md:text-4xl font-bold text-primary leading-tight">
+          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             10:30 AM CET<br/>2:00 PM IST
           </h3>
         </div>
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.3em] text-white/50">Location</p>
-          <h3 class="text-3xl md:text-4xl font-bold text-primary">
+          <h3 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             Virtual (Zoom Webinar)
           </h3>
         </div>
 
       </div>
-
     </section>
 
     <!-- ABOUT -->
@@ -99,7 +96,7 @@
 
         <h2 class="text-xs uppercase tracking-[0.4em] text-primary">About</h2>
 
-        <h3 class="text-4xl font-bold">
+        <h3 class="text-4xl font-bold text-white">
           A platform for <span class="text-primary">strategic climate dialogue</span>
         </h3>
 
@@ -117,7 +114,7 @@
         <div class="flex justify-between items-end">
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Agenda</h2>
-            <h3 class="text-5xl font-black">Curated Discussions</h3>
+            <h3 class="text-5xl font-black text-white">Curated Discussions</h3>
           </div>
           <p class="text-white/70 max-w-sm">
             Focused on execution, compliance, and real-time intelligence.
@@ -128,9 +125,9 @@
           <div v-for="(panel, i) in panels" :key="i"
                class="p-10 bg-white/5 border border-white/10 rounded-xl">
 
-            <span class="text-white/90">Panel 0{{ i + 1 }}</span>
+            <span class="text-white">Panel 0{{ i + 1 }}</span>
 
-            <h4 class="text-2xl font-bold mt-4 mb-3">
+            <h4 class="text-2xl font-bold mt-4 mb-3 text-white">
               {{ panel.title }}
             </h4>
 
@@ -152,12 +149,11 @@
     <section class="py-40 px-6">
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
 
-        <!-- LEFT -->
         <div class="space-y-8">
           <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Panel</h2>
 
-          <h3 class="text-5xl font-black">
-            Global <span class="text-primary">Leaders</span>
+          <h3 class="text-5xl font-black text-white">
+            <span class="text-white">Global</span> <span class="text-primary">Leaders</span>
           </h3>
 
           <p class="text-white/70">
@@ -165,7 +161,6 @@
           </p>
         </div>
 
-        <!-- RIGHT CARDS -->
         <div class="grid grid-cols-2 gap-8">
 
           <div class="p-8 bg-white/5 border border-white/10 rounded-2xl shadow-xl">
@@ -197,7 +192,7 @@
     <section class="py-40 px-6 border-t border-white/10 text-center">
       <div class="max-w-3xl mx-auto space-y-10">
 
-        <h3 class="text-4xl font-bold">
+        <h3 class="text-4xl font-bold text-white">
           Join a high-level <br/>
           <span class="text-primary">climate dialogue</span>
         </h3>
