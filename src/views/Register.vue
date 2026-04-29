@@ -14,9 +14,9 @@
           </p>
         </div>
         <button
-          @click="submitted = false"
-          class="text-xs font-bold uppercase tracking-widest text-primary underline underline-offset-4 cursor-pointer"
-        >
+          type="submit"
+  class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs transition-all duration-300 transform hover:scale-105 hover:shadow-xl active:scale-95 flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px] cursor-pointer"
+>
           Register Another Attendee
         </button>
         <div class="pt-4">
