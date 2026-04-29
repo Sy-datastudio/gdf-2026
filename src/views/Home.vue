@@ -47,7 +47,7 @@
 
             <button
               @click="$emit('navigate', 'register')"
-              class="px-8 py-4 border border-white/20 text-white font-bold text-xs uppercase rounded-lg hover:bg-white/5"
+              class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]"
             >
               Express Interest
             </button>
@@ -143,38 +143,52 @@
             A tightly curated group of decision-makers across maritime operations, climate systems, and regulatory design.
           </p>
 
-        </div>
+<div class="grid grid-cols-2 gap-8">
 
-        <div class="grid grid-cols-2 gap-6">
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <p class="text-primary text-sm mb-2">Curated Leadership</p>
-            <p class="text-xs text-white/60">Senior policy & industry actors</p>
-          </div>
+  <div class="p-8 bg-white/5 border border-white/10 rounded-2xl shadow-xl">
+    <p class="text-primary text-base font-semibold mb-3 tracking-wide">
+      Curated Leadership
+    </p>
+    <p class="text-sm text-white/80 leading-relaxed">
+      Senior policy & industry actors
+    </p>
+  </div>
 
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <p class="text-primary text-sm mb-2">Registered entry</p>
-            <p class="text-xs text-white/60">Access is selectively extended</p>
-          </div>
+  <div class="p-8 bg-white/5 border border-white/10 rounded-2xl shadow-xl">
+    <p class="text-primary text-base font-semibold mb-3 tracking-wide">
+      Registered Entry
+    </p>
+    <p class="text-sm text-white/80 leading-relaxed">
+      Access is selectively extended
+    </p>
+  </div>
 
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <p class="text-primary text-sm mb-2">High-Signal Dialogue</p>
-            <p class="text-xs text-white/60">Execution-focused exchange</p>
-          </div>
+  <div class="p-8 bg-white/5 border border-white/10 rounded-2xl shadow-xl">
+    <p class="text-primary text-base font-semibold mb-3 tracking-wide">
+      High-Signal Dialogue
+    </p>
+    <p class="text-sm text-white/80 leading-relaxed">
+      Execution-focused exchange
+    </p>
+  </div>
 
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <p class="text-primary text-sm mb-2">Global Perspective</p>
-            <p class="text-xs text-white/60">Cross-sector representation</p>
-          </div>
-        </div>
+  <div class="p-8 bg-white/5 border border-white/10 rounded-2xl shadow-xl">
+    <p class="text-primary text-base font-semibold mb-3 tracking-wide">
+      Global Perspective
+    </p>
+    <p class="text-sm text-white/80 leading-relaxed">
+      Cross-sector representation
+    </p>
+  </div>
 
-      </div>
+</div>
     </section>
 
     <!-- CTA -->
     <section class="py-40 px-6 border-t border-white/10 text-center">
       <div class="max-w-3xl mx-auto space-y-10 text-white">
 
-        <h3 class="text-5xl font-black">
+        <h3 class="text-white/90">
           Join a high-level <br/>
           <span class="text-primary">climate dialogue</span>
         </h3>
