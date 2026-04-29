@@ -40,14 +40,10 @@
 
           <div class="flex gap-4 pt-4">
             <button @click="$emit('navigate','register')"
-              class="px-8 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
+              class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
               Register
             </button>
 
-            <button
-              class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
-              Express Interest
-            </button>
           </div>
         </div>
 
