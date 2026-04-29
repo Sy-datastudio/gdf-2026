@@ -211,9 +211,9 @@ const speakerProfile = [
 
 const programme = [
   { time: '10 min', label: 'Welcome & framing' },
-  { time: '35 min', label: 'Panel 1: Regulatory context' },
+  { time: '35 min', label: 'Panel 1: Penalty to Profit' },
   { time: '5 min', label: 'Transition' },
-  { time: '35–45 min', label: 'Panel 2: Data & AI' },
+  { time: '35–45 min', label: 'Panel 2: The AI Climate Leap' },
   { time: '5 min', label: 'Closing reflections' },
 ]
 </script>
