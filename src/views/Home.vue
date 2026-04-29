@@ -1,42 +1,46 @@
 <template>
   <div class="pt-20 relative text-white overflow-hidden">
 
-    <!-- 🌍 GLOBAL BACKGROUND IMAGE -->
+    <!-- 🌍 GLOBAL BACKGROUND -->
     <div class="fixed inset-0 -z-10">
       <img 
         src="/dark-setting-globe.jpg"
         class="w-full h-full object-cover"
       />
 
-      <!-- dark overlay -->
-      <div class="absolute inset-0 bg-black/75"></div>
+      <!-- lighter overlay -->
+      <div class="absolute inset-0 bg-black/55"></div>
 
-      <!-- gradient depth -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black"></div>
+      <!-- gradient -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80"></div>
     </div>
 
     <!-- HERO -->
-    <section class="relative min-h-[95vh] flex items-center px-6 overflow-hidden">
-
-      <!-- subtle glow -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(29,162,130,0.15),transparent_40%)]"></div>
+    <section class="relative min-h-[95vh] flex items-center px-6">
 
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
 
         <!-- LEFT -->
         <div class="space-y-8">
+
           <div class="text-xs uppercase tracking-[0.4em] text-primary flex items-center gap-3">
             <span class="w-10 h-[1px] bg-primary"></span>
             World Environment Day Edition
           </div>
 
-          <h1 class="text-5xl md:text-7xl font-black leading-[0.9]">
-            GLOBAL <br/>
-            <span class="text-primary">DECARBONIZATION</span><br/>
-            FORUM <span class="text-primary">2026</span>
+          <!-- 🔥 FIXED HERO TEXT -->
+          <h1 class="text-5xl md:text-7xl font-black leading-[0.9] text-white">
+            <span class="text-white/90">GLOBAL</span> <br/>
+            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">
+              DECARBONIZATION
+            </span><br/>
+            <span class="text-white/90">FORUM</span>
+            <span class="text-primary drop-shadow-[0_0_20px_rgba(29,162,130,0.4)]">
+              2026
+            </span>
           </h1>
 
-          <p class="text-lg text-white/70 max-w-xl">
+          <p class="text-lg text-white/80 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
             A private, high-signal convening of leaders shaping the next phase of climate execution.
           </p>
 
@@ -55,12 +59,13 @@
               Express Interest
             </button>
           </div>
+
         </div>
 
-        <!-- RIGHT VISUAL (your image replaces unsplash) -->
+        <!-- RIGHT VISUAL -->
         <div class="hidden md:block relative">
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-black"></div>
-          <img src="/dark-setting-globe.jpeg" class="rounded-xl opacity-80"/>
+          <img src="/dark-setting-globe.jpg" class="rounded-xl opacity-80"/>
         </div>
 
       </div>
@@ -94,59 +99,21 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-          <div v-for="(panel, i) in panels" :key="i" class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:-translate-y-2 transition">
+          <div v-for="(panel, i) in panels" :key="i"
+               class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:-translate-y-2 transition">
+
             <span class="text-xs opacity-40">Panel 0{{ i + 1 }}</span>
+
             <h4 class="text-2xl font-bold mt-4 mb-3">{{ panel.title }}</h4>
-            <p class="text-primary text-xs uppercase mb-6">{{ panel.subtitle }}</p>
+
+            <p class="text-primary text-xs uppercase mb-6">
+              {{ panel.subtitle }}
+            </p>
 
             <ul class="space-y-3 text-white/70 text-sm">
               <li v-for="(p, j) in panel.points" :key="j">• {{ p }}</li>
             </ul>
-          </div>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- GLOBAL LEADERS -->
-    <section class="py-40 px-6 backdrop-blur-[2px]">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-        <div class="space-y-8">
-          <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Panel</h2>
-
-          <h3 class="text-5xl font-black">
-            Global <span class="text-primary">Leaders</span>
-          </h3>
-
-          <p class="text-white/70 max-w-xl">
-            A tightly curated group of decision-makers across maritime operations, climate systems, and regulatory design.
-          </p>
-
-          <div class="p-8 bg-white/5 border border-white/10 rounded-xl text-white/70 italic">
-            “This is a closed, high-trust environment designed for depth—not broadcast.”
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-6">
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <h4 class="text-sm text-primary mb-2">Curated Leadership</h4>
-            <p class="text-xs text-white/60">Senior actors across policy and industry</p>
-          </div>
-
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <h4 class="text-sm text-primary mb-2">Invitation Only</h4>
-            <p class="text-xs text-white/60">Access limited to selected participants</p>
-          </div>
-
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <h4 class="text-sm text-primary mb-2">High-Signal Dialogue</h4>
-            <p class="text-xs text-white/60">Execution-focused discussion</p>
-          </div>
-
-          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
-            <h4 class="text-sm text-primary mb-2">Global Perspective</h4>
-            <p class="text-xs text-white/60">Cross-sector, cross-region insights</p>
           </div>
         </div>
 
@@ -176,8 +143,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRight } from 'lucide-vue-next'
-
 defineEmits<{
   navigate: [pageId: string]
 }>()
