@@ -73,6 +73,46 @@
       </div>
     </section>
 
+<!-- EVENT DETAILS BAND -->
+<section class="py-24 px-6 border-t border-white/10 border-b border-white/10">
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+
+    <!-- DATE -->
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.3em] text-white/50">
+        Date
+      </p>
+      <h3 class="text-3xl md:text-4xl font-bold text-primary">
+        May 27, 2026
+      </h3>
+    </div>
+
+    <!-- TIME -->
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.3em] text-white/50">
+        Time
+      </p>
+      <h3 class="text-3xl md:text-4xl font-bold text-primary leading-tight">
+        10:30 AM CET<br/>
+        2:00 PM IST
+      </h3>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="space-y-4">
+      <p class="text-xs uppercase tracking-[0.3em] text-white/50">
+        Location
+      </p>
+      <h3 class="text-3xl md:text-4xl font-bold text-primary">
+        Virtual (Zoom Webinar)
+      </h3>
+    </div>
+
+  </div>
+
+</section>
+
     <!-- ABOUT -->
     <section class="py-40 px-6 border-t border-white/10">
       <div class="max-w-6xl mx-auto text-center space-y-8">
