@@ -1,12 +1,25 @@
 <template>
-  <div class="pt-20 bg-[#05070A] text-white">
+  <div class="pt-20 relative text-white overflow-hidden">
+
+    <!-- 🌍 GLOBAL BACKGROUND IMAGE -->
+    <div class="fixed inset-0 -z-10">
+      <img 
+        src="/dark-setting-globe.jpeg"
+        class="w-full h-full object-cover"
+      />
+
+      <!-- dark overlay -->
+      <div class="absolute inset-0 bg-black/75"></div>
+
+      <!-- gradient depth -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black"></div>
+    </div>
 
     <!-- HERO -->
     <section class="relative min-h-[95vh] flex items-center px-6 overflow-hidden">
-      
-      <!-- Background glow + grid -->
+
+      <!-- subtle glow -->
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(29,162,130,0.15),transparent_40%)]"></div>
-      <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#1da282 1px, transparent 1px); background-size: 40px 40px;"></div>
 
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
 
@@ -44,17 +57,17 @@
           </div>
         </div>
 
-        <!-- RIGHT VISUAL -->
+        <!-- RIGHT VISUAL (your image replaces unsplash) -->
         <div class="hidden md:block relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black"></div>
-          <img src="https://images.unsplash.com/photo-1526378722484-cc5c510fe30d?q=80&w=1600" class="rounded-xl opacity-70"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-black"></div>
+          <img src="/dark-setting-globe.jpeg" class="rounded-xl opacity-80"/>
         </div>
 
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="py-40 px-6 border-t border-white/10">
+    <section class="py-40 px-6 border-t border-white/10 backdrop-blur-[2px]">
       <div class="max-w-6xl mx-auto text-center space-y-8">
         <h2 class="text-xs uppercase tracking-[0.4em] text-primary">About</h2>
         <h3 class="text-4xl font-bold">
@@ -67,7 +80,7 @@
     </section>
 
     <!-- AGENDA -->
-    <section class="py-40 px-6 bg-[#0A0F14] border-y border-white/10">
+    <section class="py-40 px-6 border-y border-white/10 backdrop-blur-[2px]">
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div class="flex justify-between items-end">
@@ -81,7 +94,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-          <div v-for="(panel, i) in panels" :key="i" class="p-10 bg-white/5 border border-white/10 rounded-xl hover:-translate-y-2 transition">
+          <div v-for="(panel, i) in panels" :key="i" class="p-10 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:-translate-y-2 transition">
             <span class="text-xs opacity-40">Panel 0{{ i + 1 }}</span>
             <h4 class="text-2xl font-bold mt-4 mb-3">{{ panel.title }}</h4>
             <p class="text-primary text-xs uppercase mb-6">{{ panel.subtitle }}</p>
@@ -95,17 +108,10 @@
       </div>
     </section>
 
-    <!-- GLOBAL LEADERS (FIXED 🔥) -->
-    <section class="py-40 px-6 relative overflow-hidden">
+    <!-- GLOBAL LEADERS -->
+    <section class="py-40 px-6 backdrop-blur-[2px]">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-      <!-- subtle background -->
-      <div class="absolute inset-0 opacity-10">
-        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1600" class="w-full h-full object-cover"/>
-      </div>
-
-      <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center">
-
-        <!-- LEFT -->
         <div class="space-y-8">
           <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Panel</h2>
 
@@ -117,15 +123,12 @@
             A tightly curated group of decision-makers across maritime operations, climate systems, and regulatory design.
           </p>
 
-          <!-- QUOTE BLOCK -->
           <div class="p-8 bg-white/5 border border-white/10 rounded-xl text-white/70 italic">
             “This is a closed, high-trust environment designed for depth—not broadcast.”
           </div>
         </div>
 
-        <!-- RIGHT SIGNAL CARDS -->
         <div class="grid grid-cols-2 gap-6">
-
           <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
             <h4 class="text-sm text-primary mb-2">Curated Leadership</h4>
             <p class="text-xs text-white/60">Senior actors across policy and industry</p>
@@ -145,14 +148,13 @@
             <h4 class="text-sm text-primary mb-2">Global Perspective</h4>
             <p class="text-xs text-white/60">Cross-sector, cross-region insights</p>
           </div>
-
         </div>
 
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-40 px-6 border-t border-white/10 text-center">
+    <section class="py-40 px-6 border-t border-white/10 text-center backdrop-blur-[2px]">
       <div class="max-w-3xl mx-auto space-y-10">
 
         <h3 class="text-5xl font-black">
