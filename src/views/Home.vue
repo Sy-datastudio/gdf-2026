@@ -19,16 +19,25 @@
             World Environment Day Edition
           </div>
 
-          <h1 class="text-5xl md:text-7xl font-black leading-[0.9]">
-            <span class="text-white">GLOBAL</span><br/>
+          <h1 class="text-5xl md:text-7xl font-black leading-[0.9] text-white">
+            GLOBAL<br/>
             <span class="text-primary">DECARBONIZATION</span><br/>
-            <span class="text-white">FORUM</span>
-            <span class="text-primary">2026</span>
+            FORUM <span class="text-primary">2026</span>
           </h1>
 
           <p class="text-lg text-white/80 max-w-xl">
             A cross-sector dialogue shaping the future of climate action.
           </p>
+
+          <!-- ICON STRIP -->
+          <div class="flex gap-6 pt-4">
+            <div v-for="(item,i) in thematicIcons" :key="i" class="flex flex-col items-center gap-2">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <component :is="item.icon" :size="22"/>
+              </div>
+              <span class="text-[10px] tracking-widest text-white/50">{{ item.label }}</span>
+            </div>
+          </div>
 
           <div class="flex gap-4 pt-4">
             <button @click="$emit('navigate','register')"
@@ -90,6 +99,76 @@
       </div>
     </section>
 
+    <!-- WHY THIS MATTERS -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center space-y-4">
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
+          <h3 class="text-5xl font-black text-white">
+            Decarbonization is entering an <span class="text-primary">enforcement era</span>
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div v-for="(card,i) in contextCards" :key="i"
+            class="p-10 bg-white/5 border border-white/10 rounded-xl">
+
+            <component :is="card.icon" class="text-primary mb-6" :size="28"/>
+            <h4 class="text-xl font-bold text-white mb-3">{{ card.title }}</h4>
+            <p class="text-white/70 text-sm">{{ card.text }}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="py-32 px-6">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div>
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
+          <h3 class="text-5xl font-black text-white">Curated Discussions</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div v-for="(panel,i) in panels" :key="i"
+            class="p-10 bg-white/5 border border-white/10 rounded-xl">
+
+            <h4 class="text-2xl font-bold text-white">{{ panel.title }}</h4>
+            <p class="text-primary text-xs uppercase mt-2">{{ panel.subtitle }}</p>
+
+            <ul class="mt-4 text-white/70 text-sm space-y-2">
+              <li v-for="(p,j) in panel.points" :key="j">• {{ p }}</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-5xl mx-auto space-y-12">
+
+        <h3 class="text-3xl font-bold text-white text-center">Schedule</h3>
+
+        <div class="space-y-6">
+          <div v-for="(item,i) in schedule" :key="i"
+            class="flex justify-between border-b border-white/10 pb-3">
+
+            <span class="text-primary font-semibold">{{ item.time }}</span>
+            <span class="text-white/70">{{ item.label }}</span>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="py-32 px-6 text-center">
       <div class="max-w-4xl mx-auto space-y-10">
@@ -104,7 +183,7 @@
             Request Invitation
           </button>
 
-          <button class="px-10 py-5 border border-primary text-primary font-bold rounded-lg flex items-center gap-2">
+          <button class="px-10 py-5 border border-primary text-primary font-bold rounded-lg">
             Contact Organizer
           </button>
         </div>
@@ -127,23 +206,14 @@
           Focused on maritime and aviation, enabling Net Zero transitions through data-driven strategies.
         </p>
 
-        <!-- 🔥 NEW VISIT LINK -->
-        <div class="pt-6">
-          <a 
-            href="https://www.sustivon.com"
-            target="_blank"
-            class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.3em] text-primary hover:opacity-80"
-          >
-            Visit Sustivon.com ↗
-          </a>
-        </div>
+        <!-- NEW LINK -->
+        <a href="https://www.sustivon.com" target="_blank"
+           class="inline-block mt-6 text-primary font-bold uppercase tracking-widest text-sm hover:opacity-80">
+          Visit Sustivon.com ↗
+        </a>
 
       </div>
     </section>
 
   </div>
 </template>
-
-<script setup lang="ts">
-defineEmits<{ navigate: [pageId: string] }>()
-</script>
