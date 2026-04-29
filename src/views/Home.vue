@@ -13,7 +13,6 @@
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <div class="space-y-8">
-
           <div class="text-xs uppercase tracking-[0.4em] text-primary flex items-center gap-3">
             <span class="w-10 h-[1px] bg-primary"></span>
             World Environment Day Edition
@@ -50,7 +49,6 @@
               Express Interest
             </button>
           </div>
-
         </div>
 
         <div class="hidden md:flex justify-end">
@@ -169,28 +167,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-32 px-6 text-center">
-      <div class="max-w-4xl mx-auto space-y-10">
-
-        <h3 class="text-5xl font-black text-white">
-          Join a high-level conversation shaping
-          <span class="text-primary"> climate action.</span>
-        </h3>
-
-        <div class="flex flex-wrap justify-center gap-6">
-          <button class="px-10 py-5 bg-primary text-black font-bold rounded-lg">
-            Request Invitation
-          </button>
-
-          <button class="px-10 py-5 border border-primary text-primary font-bold rounded-lg">
-            Contact Organizer
-          </button>
-        </div>
-
-      </div>
-    </section>
-
     <!-- ORGANIZED BY -->
     <section class="py-32 px-6 border-t border-white/10 text-center">
       <div class="max-w-4xl mx-auto space-y-8">
@@ -206,14 +182,62 @@
           Focused on maritime and aviation, enabling Net Zero transitions through data-driven strategies.
         </p>
 
-        <!-- NEW LINK -->
         <a href="https://www.sustivon.com" target="_blank"
            class="inline-block mt-6 text-primary font-bold uppercase tracking-widest text-sm hover:opacity-80">
           Visit Sustivon.com ↗
         </a>
+
+        <!-- CONTACT BUTTON -->
+        <div class="mt-6">
+          <a href="mailto:syeda@sustivon.com">
+            <button class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
+              Contact Organizer
+            </button>
+          </a>
+        </div>
 
       </div>
     </section>
 
   </div>
 </template>
+
+<script setup lang="ts">
+import { Leaf, Globe, Zap, RefreshCw } from 'lucide-vue-next'
+
+defineEmits<{ navigate: [pageId: string] }>()
+
+const thematicIcons = [
+  { icon: Leaf, label: 'SUSTAINABILITY' },
+  { icon: Globe, label: 'GLOBAL IMPACT' },
+  { icon: Zap, label: 'CLEAN ENERGY' },
+  { icon: RefreshCw, label: 'NET ZERO' },
+]
+
+const contextCards = [
+  { icon: Globe, title: 'Global Acceleration', text: 'Regulatory frameworks are accelerating globally.' },
+  { icon: Zap, title: 'Structural Pressure', text: 'Transport sectors face transition pressure.' },
+  { icon: Globe, title: 'Data Advantage', text: 'Competitive advantage is data-driven.' },
+]
+
+const panels = [
+  {
+    title: 'From Penalty to Profit',
+    subtitle: 'Regulation as Competitive Advantage',
+    points: ['Compliance as leverage', 'Policy economics', 'Fuel transition'],
+  },
+  {
+    title: 'The AI Climate Leap',
+    subtitle: 'Data-Driven Execution',
+    points: ['Real-time emissions', 'AI optimization', 'Decision systems'],
+  },
+]
+
+const schedule = [
+  { time: '10 min', label: 'Welcome & framing' },
+  { time: '35 min', label: 'Panel 1' },
+  { time: '5 min', label: 'Transition' },
+  { time: '35–45 min', label: 'Panel 2' },
+  { time: '5 min', label: 'Closing' },
+]
+</script>
