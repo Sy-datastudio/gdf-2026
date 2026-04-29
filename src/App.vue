@@ -45,21 +45,18 @@ onMounted(() => {
 </script>
 
 <style>
-/* PAGE TRANSITION */
-.fade-slide-enter-active,
-.fade-slide-leave-active {
-  transition: all 0.4s ease;
-  position: absolute;
-  width: 100%;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.6s ease;
 }
 
-.fade-slide-enter-from {
+.page-enter-from {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(80px);
 }
 
-.fade-slide-leave-to {
+.page-leave-to {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateX(-80px);
 }
 </style>
