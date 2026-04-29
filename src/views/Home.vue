@@ -68,23 +68,23 @@
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.6em] text-white/90">Date</p>
-          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+          <h6 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             May 27, 2026
-          </h4>
+          </h6>
         </div>
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.6em] text-white/90">Time</p>
-          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
-            10:30 AM CET<br/>2:00 PM IST
-          </h4>
+          <h6 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+            10:30 AM CET<br/>2:00 PM IST<br/>4:30 PM SGT
+          </h6>
         </div>
 
         <div class="space-y-4">
           <p class="text-xs uppercase tracking-[0.6em] text-white/90">Location</p>
-          <h4 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
+          <h6 class="text-4xl md:text-5xl font-bold text-primary drop-shadow-[0_0_10px_rgba(29,162,130,0.4)]">
             Virtual (Zoom Webinar)
-          </h4>
+          </h6>
         </div>
 
       </div>
