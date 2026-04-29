@@ -142,18 +142,28 @@
           in this dialogue.
         </h3>
         <div class="flex flex-wrap justify-center gap-6">
-          <button
-            @click="$emit('navigate', 'register')"
-            class="px-10 py-4 bg-primary text-background font-bold tracking-widest uppercase text-xs hover:opacity-90 transition-all flex items-center gap-3 rounded-[8px] cursor-pointer"
-          >
-            Confirm Interest <CheckCircle :size="14" />
-          </button>
-<!-- CONTACT BUTTON -->
-        <div class="mt-6">
-          <a href="mailto:syeda@sustivon.com">
-            <button class="px-10 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
-              Contact Organizer
-            </button>
+<div class="mt-6 flex flex-col md:flex-row gap-4 items-center justify-center">
+
+  <!-- PRIMARY -->
+  <button
+    @click="$emit('navigate', 'register')"
+    class="w-[240px] px-10 py-4 bg-primary text-black font-bold tracking-widest uppercase text-xs rounded-[8px] flex items-center justify-center gap-3 hover:opacity-90 transition-all"
+  >
+    Confirm Interest
+    <CheckCircle :size="14" />
+  </button>
+
+  <!-- SECONDARY -->
+  <a href="mailto:syeda@sustivon.com" class="w-[240px]">
+    <button
+      class="w-full px-10 py-4 border border-primary text-primary font-bold tracking-widest uppercase text-xs rounded-[8px] flex items-center justify-center gap-3 hover:bg-primary/10 transition-all"
+    >
+      Contact Organizer
+      <Mail :size="14" />
+    </button>
+  </a>
+
+</div>
           </a>
         </div>
         </div>
