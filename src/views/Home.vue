@@ -1,278 +1,195 @@
 <template>
-  <div class="pt-20">
-    <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden grid-structure">
-      <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'20\' viewBox=\'0 0 100 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10 Q 25 0 50 10 T 100 10\' stroke=\'%231da282\' fill=\'none\' stroke-width=\'1\'/%3E%3C/svg%3E'); background-repeat: repeat;"></div>
-      <div class="absolute inset-0 wave-pattern opacity-40 pointer-events-none"></div>
+  <div class="pt-20 bg-[#05070A] text-white">
+
+    <!-- HERO -->
+    <section class="relative min-h-[95vh] flex items-center px-6 overflow-hidden">
       
-      <div class="max-w-7xl mx-auto w-full relative z-10 py-20 flex flex-col items-center text-center">
-        <div class="space-y-8 max-w-4xl flex flex-col items-center">
-          <div class="space-y-4 flex flex-col items-center">
-            <div class="flex items-center gap-3">
-              <span class="w-12 h-[1px] bg-primary"></span>
-              <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary">World Environment Day Edition</span>
-              <span class="w-12 h-[1px] bg-primary"></span>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-primary leading-[0.9]">
-              GLOBAL <br />
-              DECARBONIZATION <br />
-              FORUM 2026
-            </h1>
-            <p class="text-xl md:text-2xl text-text-muted font-light max-w-2xl leading-relaxed">
-              A cross-sector dialogue shaping the future of climate action.
-            </p>
+      <!-- Background glow + grid -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(29,162,130,0.15),transparent_40%)]"></div>
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#1da282 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+      <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+        <!-- LEFT -->
+        <div class="space-y-8">
+          <div class="text-xs uppercase tracking-[0.4em] text-primary flex items-center gap-3">
+            <span class="w-10 h-[1px] bg-primary"></span>
+            World Environment Day Edition
           </div>
 
-          <!-- Decorative Icons -->
-          <div class="flex flex-wrap justify-center gap-8 md:gap-12 py-4">
-            <div v-for="(item, idx) in thematicIcons" :key="idx" class="flex flex-col items-center gap-3">
-              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                <component :is="item.icon" :size="36" :stroke-width="1.5" />
-              </div>
-              <span class="text-[10px] font-black tracking-[0.2em] text-[#888] uppercase">{{ item.label }}</span>
-            </div>
-          </div>
+          <h1 class="text-5xl md:text-7xl font-black leading-[0.9]">
+            GLOBAL <br/>
+            <span class="text-primary">DECARBONIZATION</span><br/>
+            FORUM <span class="text-primary">2026</span>
+          </h1>
 
-          <!-- Date/Time/Location -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-y border-accent/50 w-full">
-            <div class="flex flex-col items-center gap-2">
-              <Calendar class="text-primary opacity-60" :size="24" />
-              <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Date</span>
-              <span class="text-lg md:text-xl font-bold tracking-tight text-primary">May 27, 2026</span>
-            </div>
-            <div class="flex flex-col items-center gap-2 border-y md:border-y-0 md:border-x border-accent/50 py-6 md:py-0 px-0 md:px-8">
-              <Clock class="text-primary opacity-60" :size="24" />
-              <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Time</span>
-              <span class="text-lg md:text-xl font-bold tracking-tight text-primary">10:30 AM CET | 2:00 PM IST</span>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-              <MapPin class="text-primary opacity-60" :size="24" />
-              <span class="text-[10px] uppercase tracking-widest font-bold opacity-40">Location</span>
-              <span class="text-lg md:text-xl font-bold tracking-tight text-primary">Virtual (Zoom Webinar)</span>
-            </div>
-          </div>
+          <p class="text-lg text-white/70 max-w-xl">
+            A private, high-signal convening of leaders shaping the next phase of climate execution.
+          </p>
 
-          <!-- Buttons -->
-          <div class="flex flex-wrap items-center justify-center gap-6">
+          <div class="flex gap-4">
             <button
               @click="$emit('navigate', 'register')"
-              class="group px-8 py-4 bg-primary text-background font-bold tracking-widest uppercase text-xs flex items-center gap-3 hover:opacity-90 transition-all shadow-xl shadow-primary/10 cursor-pointer rounded-[8px]"
+              class="px-8 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
             >
               Request Invitation
-              <ArrowRight :size="14" class="group-hover:translate-x-1 transition-transform" />
             </button>
+
             <button
               @click="$emit('navigate', 'register')"
-              class="px-8 py-4 border border-primary/20 text-primary font-bold tracking-widest uppercase text-xs hover:bg-primary/5 transition-all cursor-pointer rounded-[8px]"
+              class="px-8 py-4 border border-white/20 text-white text-xs uppercase tracking-widest rounded-lg hover:bg-white/5"
             >
               Express Interest
             </button>
           </div>
         </div>
+
+        <!-- RIGHT VISUAL -->
+        <div class="hidden md:block relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black"></div>
+          <img src="https://images.unsplash.com/photo-1526378722484-cc5c510fe30d?q=80&w=1600" class="rounded-xl opacity-70"/>
+        </div>
+
       </div>
     </section>
 
-    <!-- About the Forum -->
-    <section class="py-32 px-6 bg-background-accent">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
-        <div class="md:col-span-4 sticky top-32">
-          <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary mb-6 flex items-center gap-3">
-            <span class="inline-block w-8 h-[1px] bg-primary"></span>
-            About the Forum
-          </h2>
-          <h3 class="text-4xl font-bold tracking-tighter leading-none mb-8">
-            A platform for strategic <span class="text-primary">climate dialogue</span>
-          </h3>
-        </div>
-        <div class="md:col-span-8 space-y-8 text-lg text-text-muted leading-relaxed font-light">
-          <p>The Global Decarbonization Forum 2026 convenes leaders across policy, industry, and academia to examine the evolving landscape of climate action.</p>
-          <p>Anchored in the World Environment Day theme, the forum focuses on the transition from commitment to execution, particularly in <span class="text-primary font-medium">maritime and aviation</span>.</p>
-          <p>The objective is to enable informed, cross-sector dialogue that supports actionable pathways toward decarbonization.</p>
-        </div>
+    <!-- ABOUT -->
+    <section class="py-40 px-6 border-t border-white/10">
+      <div class="max-w-6xl mx-auto text-center space-y-8">
+        <h2 class="text-xs uppercase tracking-[0.4em] text-primary">About</h2>
+        <h3 class="text-4xl font-bold">
+          A platform for <span class="text-primary">strategic climate dialogue</span>
+        </h3>
+        <p class="text-white/70 max-w-3xl mx-auto">
+          The Global Decarbonization Forum 2026 convenes policymakers, operators, and system leaders to move beyond commitments and toward execution.
+        </p>
       </div>
     </section>
 
-    <!-- Why This Matters -->
-    <section class="py-32 px-6 border-b border-accent">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-20 text-center space-y-4">
-          <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Critical Context</h2>
-          <h3 class="text-5xl font-black tracking-tight">Decarbonization is entering an <br/><span class="text-primary">enforcement era.</span></h3>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-accent border border-accent">
-          <div v-for="(card, i) in contextCards" :key="i" class="bg-background p-12 space-y-6 group hover:bg-background-accent transition-colors">
-            <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-              <component :is="card.icon" :size="24" />
-            </div>
-            <h4 class="text-xl font-bold tracking-tight">{{ card.title }}</h4>
-            <p class="text-text-muted text-sm leading-relaxed">{{ card.text }}</p>
+    <!-- AGENDA -->
+    <section class="py-40 px-6 bg-[#0A0F14] border-y border-white/10">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="flex justify-between items-end">
+          <div>
+            <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Agenda</h2>
+            <h3 class="text-5xl font-black">Curated Discussions</h3>
           </div>
+          <p class="text-white/60 max-w-sm">
+            Focused on execution, compliance, and real-time intelligence.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- Panel Discussions -->
-    <section class="py-32 px-6 bg-primary text-background overflow-hidden relative">
-      <div class="absolute top-0 right-0 p-32 opacity-10 rotate-12">
-        <Zap :size="400" :stroke-width="0.5" />
-      </div>
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-background/80">Curated Discussions</h2>
-            <h3 class="text-5xl font-black tracking-tight uppercase">The Agenda</h3>
-          </div>
-          <p class="text-background/90 max-w-sm text-lg">Focusing on practical execution and technological integration.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-background">
-          <div v-for="(panel, i) in panels" :key="i" class="p-12 border border-background/20 bg-background/5 backdrop-blur-sm group hover:-translate-y-2 transition-transform">
-            <span class="text-xs font-bold uppercase tracking-[0.3em] opacity-40 mb-8 block">Panel 0{{ i + 1 }}</span>
-            <h4 class="text-3xl font-bold tracking-tight mb-4">{{ panel.title }}</h4>
-            <p class="text-background/90 mb-8 border-b border-background/20 pb-8 uppercase text-xs tracking-wider">{{ panel.subtitle }}</p>
-            <ul class="space-y-4">
-              <li v-for="(point, j) in panel.points" :key="j" class="flex items-center gap-3 text-sm font-light opacity-90">
-                <span class="w-1.5 h-1.5 rounded-full bg-background"></span>
-                {{ point }}
-              </li>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div v-for="(panel, i) in panels" :key="i" class="p-10 bg-white/5 border border-white/10 rounded-xl hover:-translate-y-2 transition">
+            <span class="text-xs opacity-40">Panel 0{{ i + 1 }}</span>
+            <h4 class="text-2xl font-bold mt-4 mb-3">{{ panel.title }}</h4>
+            <p class="text-primary text-xs uppercase mb-6">{{ panel.subtitle }}</p>
+
+            <ul class="space-y-3 text-white/70 text-sm">
+              <li v-for="(p, j) in panel.points" :key="j">• {{ p }}</li>
             </ul>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- About Sustivion -->
-    <section class="py-32 px-6 border-b border-accent flex justify-center text-center">
-      <div class="max-w-4xl space-y-12">
-        <h2 class="text-xs font-bold uppercase tracking-[0.5em] text-primary">Organized By</h2>
-        <h3 class="text-4xl font-bold tracking-tighter">Sustivion</h3>
-        <p class="text-xl text-text-muted leading-relaxed font-light">
-          Sustivion is an <span class="font-semibold text-primary">IISc and NUS incubated</span> clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
-        </p>
-        <p class="text-lg text-text-muted leading-relaxed opacity-80">
-          With a focus on maritime and aviation, Sustivion enables organizations to navigate complex regulatory environments and transition toward Net Zero through data-driven strategies.
-        </p>
-        <div class="pt-8">
-          <a href="https://www.sustivon.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary hover:gap-4 transition-all">
-            Visit sustivon.com <ExternalLink :size="14" />
-          </a>
-        </div>
-      </div>
-    </section>
+    <!-- GLOBAL LEADERS (FIXED 🔥) -->
+    <section class="py-40 px-6 relative overflow-hidden">
 
-    <!-- Event Details & Schedule -->
-    <section class="py-32 px-6 bg-background-accent">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-        <div class="space-y-12">
-          <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">Logistics</h2>
-            <h3 class="text-5xl font-black tracking-tight">Event Details</h3>
-          </div>
-          <div class="space-y-8">
-            <div class="grid grid-cols-2 gap-8 border-t border-accent pt-8">
-              <span class="text-xs font-bold uppercase tracking-widest opacity-40">Format</span>
-              <span class="text-sm font-semibold">Virtual (Zoom Webinar)</span>
-            </div>
-            <div class="grid grid-cols-2 gap-8 border-t border-accent pt-8">
-              <span class="text-xs font-bold uppercase tracking-widest opacity-40">Date</span>
-              <span class="text-sm font-semibold">May 27, 2026</span>
-            </div>
-          </div>
-        </div>
-        <div class="space-y-12 bg-background p-12 border border-accent shadow-sm">
-          <h3 class="text-2xl font-bold tracking-tight border-b border-accent pb-6">Schedule</h3>
-          <div class="space-y-6">
-            <div v-for="(item, i) in schedule" :key="i" class="flex justify-between items-center gap-12 group">
-              <span class="text-xs font-bold uppercase tracking-widest text-primary">{{ item.time }}</span>
-              <span class="text-sm font-medium border-b border-transparent group-hover:border-primary transition-all pb-1 text-[#333333]">{{ item.label }}</span>
-            </div>
-          </div>
-        </div>
+      <!-- subtle background -->
+      <div class="absolute inset-0 opacity-10">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1600" class="w-full h-full object-cover"/>
       </div>
-    </section>
 
-    <!-- Speakers -->
-    <section class="py-32 px-6">
-      <div class="max-w-7xl mx-auto space-y-16">
-        <div class="max-w-3xl space-y-6">
-          <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-primary">The Panel</h2>
-          <h3 class="text-5xl font-black tracking-tight leading-none">Global Leaders</h3>
-          <p class="text-xl text-text-muted font-light leading-relaxed">
-            We are currently in the process of final confirmations across maritime operations, data systems, and sustainability research.
+      <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT -->
+        <div class="space-y-8">
+          <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Panel</h2>
+
+          <h3 class="text-5xl font-black">
+            Global <span class="text-primary">Leaders</span>
+          </h3>
+
+          <p class="text-white/70 max-w-xl">
+            A tightly curated group of decision-makers across maritime operations, climate systems, and regulatory design.
           </p>
-          <div class="p-8 bg-background-accent border-l-4 border-primary text-sm text-text-muted leading-relaxed">
-            "The panel is being intentionally kept small to ensure depth of discussion. Final speaker details will be shared shortly."
+
+          <!-- QUOTE BLOCK -->
+          <div class="p-8 bg-white/5 border border-white/10 rounded-xl text-white/70 italic">
+            “This is a closed, high-trust environment designed for depth—not broadcast.”
           </div>
         </div>
+
+        <!-- RIGHT SIGNAL CARDS -->
+        <div class="grid grid-cols-2 gap-6">
+
+          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
+            <h4 class="text-sm text-primary mb-2">Curated Leadership</h4>
+            <p class="text-xs text-white/60">Senior actors across policy and industry</p>
+          </div>
+
+          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
+            <h4 class="text-sm text-primary mb-2">Invitation Only</h4>
+            <p class="text-xs text-white/60">Access limited to selected participants</p>
+          </div>
+
+          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
+            <h4 class="text-sm text-primary mb-2">High-Signal Dialogue</h4>
+            <p class="text-xs text-white/60">Execution-focused discussion</p>
+          </div>
+
+          <div class="p-6 bg-white/5 border border-white/10 rounded-xl">
+            <h4 class="text-sm text-primary mb-2">Global Perspective</h4>
+            <p class="text-xs text-white/60">Cross-sector, cross-region insights</p>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-32 px-6 border-t border-accent bg-background-accent grid-structure relative overflow-hidden">
-      <div class="absolute inset-0 wave-pattern opacity-10 pointer-events-none"></div>
-      <div class="max-w-4xl mx-auto text-center space-y-12 relative z-10">
-        <h3 class="text-5xl font-black tracking-tighter leading-[0.9]">
-          JOIN A HIGH-LEVEL <br/>
-          CONVERSATION SHAPING <br/>
-          <span class="text-primary">CLIMATE ACTION.</span>
+    <!-- CTA -->
+    <section class="py-40 px-6 border-t border-white/10 text-center">
+      <div class="max-w-3xl mx-auto space-y-10">
+
+        <h3 class="text-5xl font-black">
+          Join a high-level <br/>
+          <span class="text-primary">climate dialogue</span>
         </h3>
-        <div class="flex flex-wrap justify-center items-center gap-6">
-          <button
-            @click="$emit('navigate', 'register')"
-            class="group px-10 py-5 bg-primary text-background font-bold tracking-widest uppercase text-xs flex items-center gap-3 hover:opacity-90 transition-all shadow-xl shadow-primary/20 cursor-pointer rounded-[8px]"
-          >
-            Request Invitation
-            <ArrowRight :size="14" class="group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button
-            @click="$emit('navigate', 'register')"
-            class="px-10 py-5 border border-primary/20 text-primary font-bold tracking-widest uppercase text-xs flex items-center gap-3 hover:bg-primary/5 transition-all cursor-pointer rounded-[8px]"
-          >
-            Contact Organizer <Mail :size="14" />
-          </button>
-        </div>
+
+        <button
+          @click="$emit('navigate', 'register')"
+          class="px-10 py-5 bg-primary text-black font-bold uppercase tracking-widest rounded-lg"
+        >
+          Request Invitation
+        </button>
+
       </div>
     </section>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { Leaf, Mail, ArrowRight, Zap, Database, Calendar, Clock, MapPin, ExternalLink, Globe, RefreshCw } from 'lucide-vue-next'
+import { ArrowRight } from 'lucide-vue-next'
 
 defineEmits<{
   navigate: [pageId: string]
 }>()
 
-const thematicIcons = [
-  { icon: Leaf, label: 'SUSTAINABILITY' },
-  { icon: Globe, label: 'GLOBAL IMPACT' },
-  { icon: Zap, label: 'CLEAN ENERGY' },
-  { icon: RefreshCw, label: 'NET ZERO' },
-]
-
-const contextCards = [
-  { icon: Globe, title: 'Global Acceleration', text: 'Regulatory frameworks are accelerating globally as international bodies set increasingly stringent emission targets.' },
-  { icon: Zap, title: 'Structural Pressure', text: 'Transport sectors, particularly high-emission ones like maritime and aviation, face mounting structural transition pressures.' },
-  { icon: Database, title: 'Data Advantage', text: 'Competitive advantage is increasingly tied to compliance efficiency and innovation driven by real-time data.' },
-]
-
 const panels = [
   {
     title: 'From Penalty to Profit',
-    subtitle: 'Can Decarbonization Regulations Create Competitive Advantage?',
-    points: ['Compliance as a strategic lever', 'Economic implications of policies', 'Biofuels in maritime/aviation'],
+    subtitle: 'Regulation as Competitive Advantage',
+    points: ['Compliance as leverage', 'Policy economics', 'Fuel transition'],
   },
   {
     title: 'The AI Climate Leap',
-    subtitle: 'How Real-Time Data Is Deciding Who Wins the Decarbonization Race',
-    points: ['AI-driven emissions tracking', 'Real-time decision-making', 'Data as a competitive differentiator'],
+    subtitle: 'Data-Driven Execution',
+    points: ['Real-time emissions', 'AI optimization', 'Decision systems'],
   },
-]
-
-const schedule = [
-  { time: '10 min', label: 'Welcome & framing' },
-  { time: '35 min', label: 'Panel 1: Regulatory & economic context' },
-  { time: '5 min', label: 'Transition' },
-  { time: '35–45 min', label: 'Panel 2: Data & AI in execution' },
-  { time: '5 min', label: 'Closing reflections' },
 ]
 </script>
