@@ -49,11 +49,14 @@
           </div>
         </div>
 
-        <div class="hidden md:flex justify-end">
-          <img src="/ship-Emissions-image.jpeg" class="rounded-xl opacity-90 shadow-2xl border border-white/10 w-[85%]"/>
-        </div>
-
-      </div>
+<!-- BLENDED HERO IMAGE -->
+<div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[50%] pointer-events-none">
+  <img 
+    src="/ship-Emissions-image.jpeg"
+    class="w-full opacity-75 mix-blend-lighten
+    [mask-image:linear-gradient(to_left,black 60%,transparent)]"
+  />
+</div>
     </div>
 
     <!-- EVENT BAND -->
