@@ -157,7 +157,7 @@
 
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Organized By</h2>
 
-        <h3 class="text-4xl font-bold text-white">Sustivon</h3>
+        <h2 class="text-4xl font-bold text-white">Sustivon</h2>
 
         <p class="text-white/80">
           A women-led IISc and NUS incubated clean-tech venture working at the intersection of
