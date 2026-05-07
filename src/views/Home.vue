@@ -1,15 +1,15 @@
 <template>
-  <div class="pt-20 relative text-white overflow-hidden">
+  <div id="home" class="pt-20 relative text-white overflow-hidden">
 
     <!-- BACKGROUND -->
-    <div class="fixed inset-0 -z-10">
+    <div class="absolute inset-0 -z-10">
       <img src="/dark-setting-globe.jpg" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80"></div>
     </div>
 
     <!-- HERO -->
-    <section class="relative min-h-[95vh] flex items-center px-6">
+    <div class="relative min-h-[95vh] flex items-center px-6">
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <div class="space-y-8">
@@ -19,13 +19,13 @@
           </div>
 
           <h1 class="text-5xl md:text-7xl font-black leading-[0.9] text-white">
-            GLOBAL<br/>
+            MARITIME<br/>
             <span class="text-primary">DECARBONIZATION</span><br/>
             FORUM <span class="text-primary">2026</span>
           </h1>
 
           <p class="text-lg text-white/80 max-w-xl">
-            A cross-sector dialogue shaping the future of climate action.
+            A cross-sector dialogue shaping the future of climate action in the Maritime industry.
           </p>
 
           <!-- ICON STRIP -->
@@ -39,10 +39,12 @@
           </div>
 
           <div class="flex gap-4 pt-4">
-            <button @click="$emit('navigate','register')"
-              class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
-              Register
-            </button>
+      
+            <a href="#register">
+  <button class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
+    Register
+  </button>
+</a>
 
           </div>
         </div>
@@ -81,7 +83,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="py-32 px-6 text-center">
+    <section id="about" class="py-32 px-6 text-center">
       <div class="max-w-4xl mx-auto space-y-8">
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
         <h3 class="text-4xl font-bold text-white">
@@ -119,7 +121,7 @@
     </section>
 
     <!-- AGENDA -->
-    <section class="py-32 px-6">
+    <section id="agenda" class="py-32 px-6">
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div>
@@ -145,7 +147,7 @@
     </section>
 
     <!-- SCHEDULE -->
-    <section class="py-32 px-6 border-y border-white/10">
+    <section id="schedule" class="py-32 px-6 border-y border-white/10">
       <div class="max-w-5xl mx-auto space-y-12">
 
         <h3 class="text-3xl font-bold text-white text-center">Schedule</h3>
@@ -201,7 +203,6 @@
 <script setup lang="ts">
 import { Leaf, Globe, Zap, RefreshCw } from 'lucide-vue-next'
 
-defineEmits<{ navigate: [pageId: string] }>()
 
 const thematicIcons = [
   { icon: Leaf, label: 'SUSTAINABILITY' },
