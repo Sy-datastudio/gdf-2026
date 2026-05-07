@@ -120,7 +120,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-white/60 flex items-center gap-2">
+              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <User :size="14" /> Full Name*
               </label>
 
@@ -129,12 +129,12 @@
                 required
                 type="text"
                 placeholder="Enter your name"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-white placeholder-white/40 text-sm"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
               />
             </div>
 
             <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-white/60 flex items-center gap-2">
+              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Mail :size="14" /> Email*
               </label>
 
@@ -143,7 +143,7 @@
                 required
                 type="email"
                 placeholder="work@organization.com"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-white placeholder-white/40 text-sm"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
               />
             </div>
 
@@ -153,7 +153,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-white/60 flex items-center gap-2">
+              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Building2 :size="14" /> Organization*
               </label>
 
@@ -162,12 +162,12 @@
                 required
                 type="text"
                 placeholder="Company or Institution"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-white placeholder-white/40 text-sm"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
               />
             </div>
 
             <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-white/60 flex items-center gap-2">
+              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Briefcase :size="14" /> Role / Designation
               </label>
 
@@ -175,7 +175,7 @@
                 v-model="form.role"
                 type="text"
                 placeholder="e.g. Sustainability Lead"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-white placeholder-white/40 text-sm"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
               />
             </div>
 
@@ -183,14 +183,14 @@
 
           <!-- REGION -->
           <div class="space-y-3">
-            <label class="text-xs font-bold uppercase tracking-widest text-white/60 flex items-center gap-2">
+            <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
               <Map :size="14" /> Region*
             </label>
 
             <select
               v-model="form.region"
               required
-              class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-white text-sm"
+              class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black text-sm"
             >
               <option value="">Select Region</option>
               <option value="europe">Europe</option>
@@ -211,7 +211,7 @@
             </button>
 
             <!-- FIXED -->
-            <p class="text-[10px] text-center text-white/50 font-bold uppercase tracking-widest">
+            <p class="text-[10px] text-center text-black/50 font-bold uppercase tracking-widest">
               By registering, you agree to receive event-related communications.
             </p>
           </div>
