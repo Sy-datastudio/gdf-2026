@@ -130,7 +130,7 @@
     <section class="py-32 px-6">
       <div class="max-w-7xl mx-auto space-y-16">
 
-        <div>
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
           <h3 class="text-5xl font-black text-white">Curated Discussion</h3>
         </div>
