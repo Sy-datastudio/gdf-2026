@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20">
+  <section id="speakers" class="pt-20">
 
     <!-- HEADER -->
     <header class="py-32 px-6 bg-background-accent border-b border-accent grid-structure">
@@ -105,40 +105,28 @@
         </h3>
 
         <div class="relative">
-
-          <!-- vertical line -->
           <div class="absolute left-4 top-0 bottom-0 w-[2px] bg-primary/20"></div>
 
-          <!-- items -->
           <div class="space-y-10">
-
             <div v-for="(p,i) in programme" :key="i" class="relative flex gap-6">
 
-              <!-- dot -->
               <div class="relative z-10 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-black font-bold text-xs">
                 {{ i+1 }}
               </div>
 
-              <!-- content -->
               <div class="flex-1 p-6 border border-accent rounded-lg hover:border-primary/30 transition">
-
                 <div class="text-primary text-sm font-semibold mb-1">
                   {{ p.time }}
                 </div>
-
                 <div class="text-lg font-medium">
                   {{ p.label }}
                 </div>
-
               </div>
 
             </div>
-
           </div>
-
         </div>
 
-        <!-- FOOTNOTE -->
         <div class="mt-10 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70 text-center">
           <div>Format: Virtual Zoom webinar</div>
           <div>Style: Moderated panel discussions</div>
@@ -153,17 +141,17 @@
       <div class="space-y-8">
 
         <h3 class="text-4xl font-black uppercase">
-          We would be honored to have your participation
+          We would be <span class="text-primary">honored</span> to have your participation
         </h3>
 
         <div class="flex flex-col md:flex-row gap-4 justify-center">
 
-          <button
-            @click="$emit('navigate','register')"
-            class="w-[240px] px-10 py-4 bg-primary text-black font-bold uppercase rounded-lg"
+          <a
+            href="#register"
+            class="w-[240px] px-10 py-4 bg-primary text-black font-bold uppercase rounded-lg text-center"
           >
             Confirm Interest
-          </button>
+          </a>
 
           <a
             href="mailto:syeda@sustivon.com"
@@ -177,13 +165,11 @@
       </div>
     </section>
 
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { CheckCircle, Users, Info, Target, Layout } from 'lucide-vue-next'
-
-defineEmits<{ navigate: [pageId: string] }>()
 
 const audience = [
   'Policymakers and regulatory stakeholders',
