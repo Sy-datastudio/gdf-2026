@@ -173,14 +173,6 @@
           Visit Sustivon.com ↗
         </a>
 
-        <div class="mt-6">
-          <a href="mailto:syeda@sustivon.com">
-            <button class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
-              Contact Organizer
-            </button>
-          </a>
-        </div>
-
       </div>
     </section>
 
