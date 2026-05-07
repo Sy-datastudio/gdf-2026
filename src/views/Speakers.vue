@@ -16,8 +16,8 @@
           INVITATION TO <span class="text-primary">CONTRIBUTE</span>
         </h1>
 
-        <!-- FIXED -->
-        <p class="text-xl text-white/80 max-w-3xl">
+        <!-- FIXED CONTRAST -->
+        <p class="text-xl text-black/80 max-w-3xl">
           A focused, high-level dialogue at the intersection of policy, industry, and research.
         </p>
 
@@ -32,24 +32,22 @@
         <div class="space-y-12">
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Setting</h2>
-            <!-- FIXED -->
             <h3 class="text-4xl font-bold mt-2 text-white">Focus & Context</h3>
           </div>
 
-          <!-- FIXED -->
           <p class="text-lg text-white/80">
-            A curated group of stakeholders exploring actionable decarbonization pathways.
+            A curated group of stakeholders directly engaged in maritime decarbonization, focusing on operational, regulatory, and strategic realities.
           </p>
 
-          <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-xl space-y-6"">
+          <!-- FIXED VISIBILITY -->
+          <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-xl space-y-6">
             <h4 class="text-sm uppercase tracking-widest text-primary flex gap-2 items-center">
               <Users :size="18" /> Expected Audience
             </h4>
 
             <ul class="space-y-3">
-              <!-- FIXED -->
-              <li v-for="(item,i) in audience" :key="i" class="flex gap-3 text-sm text-gray-700">
-                <span class="text-primary opacity-40">0{{ i+1 }}</span>
+              <li v-for="(item,i) in audience" :key="i" class="flex gap-3 text-sm text-white/80">
+                <span class="text-primary opacity-60">0{{ i+1 }}</span>
                 {{ item }}
               </li>
             </ul>
@@ -60,7 +58,6 @@
         <div class="space-y-12">
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Mission</h2>
-            <!-- FIXED -->
             <h3 class="text-4xl font-bold mt-2 text-white">Intended Outcomes</h3>
           </div>
 
@@ -72,7 +69,6 @@
 
               <div>
                 <h5 class="font-bold text-sm uppercase text-white">{{ o.title }}</h5>
-                <!-- FIXED -->
                 <p class="text-sm text-white/70">{{ o.desc }}</p>
               </div>
 
@@ -83,17 +79,15 @@
       </div>
     </section>
 
-    <!-- WHY PARTICIPATE -->
+    <!-- WHY PARTICIPATE (CENTERED + BALANCED) -->
     <section class="py-32 px-6 bg-primary text-background">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+      <div class="max-w-4xl mx-auto text-center space-y-12">
 
-        <div>
-          <h3 class="text-5xl font-black uppercase">Why Participate?</h3>
-        </div>
+        <h3 class="text-5xl font-black uppercase">Why Participate?</h3>
 
-        <div class="space-y-4">
+        <div class="space-y-4 max-w-2xl mx-auto">
           <div v-for="(item,i) in whyParticipate" :key="i"
-            class="flex gap-4 p-6 border border-white/10 rounded-xl bg-white/5">
+            class="flex gap-4 p-6 border border-white/10 rounded-xl bg-white/10 backdrop-blur-sm">
 
             <CheckCircle :size="18" />
             <span>{{ item }}</span>
@@ -104,11 +98,10 @@
       </div>
     </section>
 
-    <!-- PROGRAMME TIMELINE -->
+    <!-- PROGRAMME TIMELINE (UPDATED FLOW) -->
     <section class="py-32 px-6">
       <div class="max-w-4xl mx-auto">
 
-        <!-- FIXED -->
         <h3 class="text-4xl font-bold mb-12 text-center text-white">
           Programme Overview
         </h3>
@@ -127,7 +120,7 @@
                 <div class="text-primary text-sm font-semibold mb-1">
                   {{ p.time }}
                 </div>
-                <!-- FIXED -->
+
                 <div class="text-lg font-medium text-white">
                   {{ p.label }}
                 </div>
@@ -137,17 +130,17 @@
           </div>
         </div>
 
-        <!-- FIXED -->
-        <div class="mt-10 text-xs uppercase tracking-widest text-white/50 space-y-2 opacity-70 text-center">
+        <!-- FIXED BRIGHTNESS -->
+        <div class="mt-10 text-xs uppercase tracking-widest text-white/80 space-y-2 text-center">
           <div>Format: Virtual Zoom webinar</div>
-          <div>Style: Moderated panel discussions</div>
+          <div>Style: Moderated panel discussion</div>
           <div>Group: Small format for depth</div>
         </div>
 
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA (CLEANED) -->
     <section class="py-40 px-6 text-center wave-pattern">
       <div class="space-y-8">
 
@@ -155,22 +148,13 @@
           We would be <span class="text-primary">honored</span> to have your participation
         </h3>
 
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-
-          <a
-            href="#register"
-            class="w-[240px] px-10 py-4 bg-primary text-black font-bold uppercase rounded-lg text-center"
-          >
-            Confirm Interest
-          </a>
-
+        <div class="flex justify-center">
           <a
             href="mailto:syeda@sustivon.com"
             class="w-[240px] px-10 py-4 border border-primary text-primary font-bold uppercase rounded-lg text-center"
           >
             Contact Organizer
           </a>
-
         </div>
 
       </div>
@@ -183,10 +167,10 @@
 import { CheckCircle, Users, Info, Target, Layout } from 'lucide-vue-next'
 
 const audience = [
-  'Policymakers and regulatory stakeholders',
-  'Industry leaders in maritime & aviation',
-  'Climate tech providers',
-  'Academic researchers',
+  'Maritime policymakers and regulatory stakeholders',
+  'Shipowners, operators, and fleet managers',
+  'Climate-tech and emissions intelligence providers',
+  'Academic and industry researchers in maritime systems',
 ]
 
 const outcomes = [
@@ -204,10 +188,8 @@ const whyParticipate = [
 ]
 
 const programme = [
-  { time: '10 min', label: 'Welcome & framing' },
-  { time: '35 min', label: 'Panel 1: Penalty to Profit' },
-  { time: '5 min', label: 'Transition' },
-  { time: '35–45 min', label: 'Panel 2: The AI Climate Leap' },
-  { time: '5 min', label: 'Closing reflections' },
+  { time: '10 min', label: 'Context: Regulatory and economic pressure' },
+  { time: '75–80 min', label: 'Discussion: Turning constraint into competitive edge' },
+  { time: '5 min', label: 'Key takeaways and closing reflections' },
 ]
 </script>
