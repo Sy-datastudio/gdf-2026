@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-20">
+  <div id="register" class="pt-20">
 
     <!-- Success State -->
     <div v-if="submitted" class="min-h-screen flex items-center justify-center px-6 py-32 wave-pattern">
