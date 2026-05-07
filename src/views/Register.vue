@@ -10,12 +10,12 @@
         </div>
 
         <div class="space-y-4">
-          <h2 class="text-3xl font-bold tracking-tight uppercase text-white">
+          <h2 class="text-3xl font-bold tracking-tight uppercase text-black">
             Registration Received
           </h2>
 
           <!-- FIXED -->
-          <p class="text-white/70 leading-relaxed font-light">
+          <p class="text-black/70 leading-relaxed font-light">
             You’re successfully registered for the Global Decarbonization Forum 2026.
             Event access details will be shared with you via email shortly.
           </p>
@@ -30,7 +30,7 @@
         <div class="pt-4">
           <button
             @click="$emit('navigate', 'home')"
-            class="text-xs font-bold uppercase tracking-widest text-white/60 hover:text-white transition"
+            class="text-xs font-bold uppercase tracking-widest text-black/60 hover:text-white transition"
           >
             Back to Home
           </button>
