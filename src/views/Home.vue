@@ -38,7 +38,7 @@
             </div>
           </div>
 
-          <!-- ✅ FIXED BUTTON -->
+          <!-- CTA -->
           <div class="flex gap-4 pt-4">
             <button 
               @click="scrollTo('register')"
@@ -56,11 +56,10 @@
       </div>
     </div>
 
-    <!-- REST OF YOUR FILE UNCHANGED -->
-
     <!-- EVENT BAND -->
     <section class="py-24 px-6 border-y border-white/10">
       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
           <h3 class="text-4xl font-bold text-primary">June 4, 2026</h3>
@@ -79,10 +78,130 @@
             Virtual (Closed Zoom Session)
           </p>
         </div>
+
       </div>
     </section>
 
-    <!-- (keep everything else exactly as is) -->
+    <!-- ABOUT -->
+    <section class="py-32 px-6 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
+
+        <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
+
+        <h3 class="text-4xl font-bold text-white">
+          A platform for <span class="text-primary">strategic maritime dialogue</span>
+        </h3>
+
+        <p class="text-white/70 max-w-2xl mx-auto">
+          The Maritime Decarbonization Forum 2026 convenes leaders across policy,
+          shipping, and technology to examine how compliance pressures are reshaping
+          cost structures, fuel strategy, and competitive positioning.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CRITICAL CONTEXT -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center space-y-4">
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
+          <h3 class="text-5xl font-black text-white">
+            Decarbonization is entering a <span class="text-primary">compliance-driven phase</span>
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div v-for="(card,i) in contextCards" :key="i"
+            class="p-10 bg-white/5 border border-white/10 rounded-xl">
+
+            <component :is="card.icon" class="text-primary mb-6" :size="28"/>
+            <h4 class="text-xl font-bold text-white mb-3">{{ card.title }}</h4>
+            <p class="text-white/70 text-sm">{{ card.text }}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="py-32 px-6">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div>
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
+          <h3 class="text-5xl font-black text-white">Curated Discussion</h3>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <div class="p-10 bg-white/5 border border-white/10 rounded-xl text-center">
+
+            <h4 class="text-2xl font-bold text-white">{{ panels[0].title }}</h4>
+            <p class="text-primary text-xs uppercase mt-2">{{ panels[0].subtitle }}</p>
+
+            <ul class="mt-6 text-white/70 text-sm space-y-3 text-left">
+              <li v-for="(p,j) in panels[0].points" :key="j">• {{ p }}</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="py-32 px-6 border-y border-white/10">
+      <div class="max-w-5xl mx-auto space-y-12">
+
+        <h3 class="text-3xl font-bold text-white text-center">Programme Timeline</h3>
+
+        <div class="space-y-6">
+          <div v-for="(item,i) in schedule" :key="i"
+            class="flex justify-between border-b border-white/10 pb-3">
+
+            <span class="text-primary font-semibold">{{ item.time }}</span>
+            <span class="text-white/70">{{ item.label }}</span>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ORGANIZED BY -->
+    <section class="py-32 px-6 border-t border-white/10 text-center">
+      <div class="max-w-4xl mx-auto space-y-8">
+
+        <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Organized By</h2>
+
+        <h3 class="text-4xl font-bold text-white">Sustivon</h3>
+
+        <p class="text-white/80">
+          IISc and NUS incubated clean-tech venture working at the intersection of
+          climate compliance, emissions intelligence, and transport decarbonization.
+        </p>
+
+        <p class="text-white/60">
+          Focused on maritime systems, enabling data-driven pathways to Net Zero.
+        </p>
+
+        <a href="https://www.sustivon.com" target="_blank"
+          class="inline-block mt-6 text-primary font-bold uppercase tracking-widest text-sm hover:opacity-80">
+          Visit Sustivon.com ↗
+        </a>
+
+        <div class="mt-6">
+          <a href="mailto:syeda@sustivon.com">
+            <button class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
+              Contact Organizer
+            </button>
+          </a>
+        </div>
+
+      </div>
+    </section>
 
   </div>
 </template>
