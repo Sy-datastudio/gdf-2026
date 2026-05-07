@@ -3,17 +3,13 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
       <!-- LOGO -->
-      <button 
-        @click="$emit('navigate', 'home')" 
-        class="flex items-center gap-3 cursor-pointer"
-      >
+      <a href="#home" class="flex items-center gap-3 cursor-pointer">
         <img 
           src="/Sustivon-logo.png"  
           alt="Sustivon"
           class="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
         />
 
-        <!-- Forum text -->
         <div class="hidden sm:flex flex-col leading-tight border-l border-primary/20 pl-3">
           <span class="text-[10px] font-bold tracking-widest uppercase opacity-40">
             Global
@@ -22,33 +18,31 @@
             Decarbonization Forum
           </span>
         </div>
-      </button>
+      </a>
 
       <!-- NAV LINKS -->
       <div class="hidden md:flex items-center gap-8">
         
-        <button 
-          @click="$emit('navigate', 'home')" 
+        <a 
+          href="#home"
           class="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
-          :class="{ 'text-primary': activePage === 'home' }"
         >
           Home
-        </button>
+        </a>
 
-        <button 
-          @click="$emit('navigate', 'speakers')" 
+        <a 
+          href="#speakers"
           class="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
-          :class="{ 'text-primary': activePage === 'speakers' }"
         >
           Invited Speakers
-        </button>
+        </a>
 
-        <button 
-          @click="$emit('navigate', 'register')" 
+        <a 
+          href="#register"
           class="px-4 py-2 bg-primary text-background text-xs font-semibold uppercase tracking-widest hover:opacity-90 transition-all cursor-pointer rounded-[8px]"
         >
           Register
-        </button>
+        </a>
 
       </div>
     </div>
@@ -56,11 +50,5 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  activePage: string
-}>()
-
-defineEmits<{
-  navigate: [pageId: string]
-}>()
+/* no props, no emits needed */
 </script>
