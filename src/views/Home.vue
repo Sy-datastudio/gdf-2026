@@ -62,7 +62,7 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
-          <h3 class="text-4xl font-bold text-primary">June 4, 2026</h3>
+          <h3 class="text-4xl font-bold text-primary">June 3, 2026</h3>
         </div>
 
         <div>
