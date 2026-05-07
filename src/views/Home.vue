@@ -89,7 +89,7 @@
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
 
         <h3 class="text-4xl font-bold text-white">
-          A platform for <span class="text-primary">strategic maritime dialogue</span>
+          A platform for <span class="text-primary">trategic Maritime dialogue</span>
         </h3>
 
         <p class="text-white/70 max-w-2xl mx-auto">
@@ -106,7 +106,7 @@
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div class="text-center space-y-4">
-          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Context</h2>
           <h3 class="text-5xl font-black text-white">
             Decarbonization is entering a <span class="text-primary">compliance-driven phase</span>
           </h3>
@@ -136,33 +136,14 @@
         </div>
 
         <div class="max-w-3xl mx-auto">
-          <div class="p-10 bg-white/5 border border-white/10 rounded-xl text-center">
+          <div v-if="mainPanel" class="p-10 bg-white/5 border border-white/10 rounded-xl text-center">
 
-            <h4 class="text-2xl font-bold text-white">{{ panels[0].title }}</h4>
-            <p class="text-primary text-xs uppercase mt-2">{{ panels[0].subtitle }}</p>
+            <h4 class="text-2xl font-bold text-white">{{ mainPanel.title }}</h4>
+            <p class="text-primary text-xs uppercase mt-2">{{ mainPanel.subtitle }}</p>
 
             <ul class="mt-6 text-white/70 text-sm space-y-3 text-left">
-              <li v-for="(p,j) in panels[0].points" :key="j">• {{ p }}</li>
+              <li v-for="(p,j) in mainPanel.points" :key="j">• {{ p }}</li>
             </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SCHEDULE -->
-    <section class="py-32 px-6 border-y border-white/10">
-      <div class="max-w-5xl mx-auto space-y-12">
-
-        <h3 class="text-3xl font-bold text-white text-center">Programme Timeline</h3>
-
-        <div class="space-y-6">
-          <div v-for="(item,i) in schedule" :key="i"
-            class="flex justify-between border-b border-white/10 pb-3">
-
-            <span class="text-primary font-semibold">{{ item.time }}</span>
-            <span class="text-white/70">{{ item.label }}</span>
 
           </div>
         </div>
@@ -179,12 +160,12 @@
         <h3 class="text-4xl font-bold text-white">Sustivon</h3>
 
         <p class="text-white/80">
-          IISc and NUS incubated clean-tech venture working at the intersection of
+          A women-led IISc and NUS incubated clean-tech venture working at the intersection of
           climate compliance, emissions intelligence, and transport decarbonization.
         </p>
 
         <p class="text-white/60">
-          Focused on maritime systems, enabling data-driven pathways to Net Zero.
+          Focused on decarbonization systems, enabling data-driven pathways to Net Zero.
         </p>
 
         <a href="https://www.sustivon.com" target="_blank"
@@ -248,9 +229,5 @@ const panels = [
   },
 ]
 
-const schedule = [
-  { time: '10 min', label: 'Opening Brief' },
-  { time: '75–80 min', label: 'Panel Discussion' },
-  { time: '5 min', label: 'Closing Remarks' },
-]
+const mainPanel = panels[0]
 </script>
