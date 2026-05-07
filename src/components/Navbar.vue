@@ -3,57 +3,54 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
       <!-- LOGO / BRAND -->
-      <a href="#home" class="flex items-center gap-3 cursor-pointer">
+      <button @click="scrollTo('home')" class="flex items-center gap-3 cursor-pointer">
         <img 
           src="/Sustivon-logo.png"  
           alt="Sustivon"
           class="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
         />
 
-        <!-- Updated Branding -->
+        <!-- Branding -->
         <div class="hidden sm:flex flex-col leading-tight border-l border-primary/20 pl-3">
           
-          <!-- Top line: Global (subtle) -->
           <span class="text-[10px] font-bold tracking-widest uppercase text-black/90">
             Global
           </span>
 
-          <!-- Main line: Highlight -->
           <span class="text-xs font-bold tracking-tight text-primary">
             Decarbonization Series
           </span>
 
-          <!-- Edition -->
           <span class="text-[10px] uppercase tracking-widest text-black/90">
             Edition 01 — Maritime
           </span>
 
         </div>
-      </a>
+      </button>
 
       <!-- NAV LINKS -->
       <div class="hidden md:flex items-center gap-8">
         
-        <a 
-          href="#home"
+        <button 
+          @click="scrollTo('home')"
           class="text-sm font-medium text-black/90 hover:text-primary transition-colors cursor-pointer tracking-wide"
         >
           Overview
-        </a>
+        </button>
 
-        <a 
-          href="#speakers"
+        <button 
+          @click="scrollTo('speakers')"
           class="text-sm font-medium text-black/90 hover:text-primary transition-colors cursor-pointer tracking-wide"
         >
           Contributors
-        </a>
+        </button>
 
-        <a 
-          href="#register"
+        <button 
+          @click="scrollTo('register')"
           class="px-5 py-2 bg-primary text-black text-xs font-semibold uppercase tracking-widest hover:opacity-90 transition-all cursor-pointer rounded-[8px]"
         >
           Join the Forum
-        </a>
+        </button>
 
       </div>
     </div>
@@ -61,5 +58,16 @@
 </template>
 
 <script setup lang="ts">
-/* no props, no emits needed */
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const yOffset = -100 // adjust if navbar height changes
+  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth',
+  })
+}
 </script>
