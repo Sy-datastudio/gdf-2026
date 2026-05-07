@@ -188,7 +188,7 @@ const outcomes = [
 const whyParticipate = [
   'High-level curated dialogue',
   'Cross-sector engagement',
-  'Policy + industry insights',
+  'Policy & industry insights',
   'Actionable outcomes',
 ]
 
