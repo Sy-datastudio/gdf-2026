@@ -26,7 +26,7 @@
 
           <!-- UPDATED HERO LINE -->
           <p class="text-lg text-white/80 max-w-lg">
-            Decarbonization is now a constraint. The question is how the maritime industry responds.
+            Decarbonization is now a constraint. For leaders, it becomes a competitive edge.
           </p>
 
           <!-- ICON STRIP -->
@@ -61,7 +61,7 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
-          <h3 class="text-4xl font-bold text-primary">May 27, 2026</h3>
+          <h3 class="text-4xl font-bold text-primary">June 4, 2026</h3>
         </div>
 
         <div>
@@ -86,7 +86,7 @@
       <div class="max-w-4xl mx-auto space-y-8">
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
         <h3 class="text-4xl font-bold text-white">
-          A forum focused on <span class="text-primary">maritime decarbonization execution</span>
+          A Forum focused on <span class="text-primary">Maritime Decarbonization Execution</span>
         </h3>
         <p class="text-white/70">
           This edition brings together policymakers, shipowners, operators, and technology providers navigating regulatory pressure, fuel uncertainty, and data-driven compliance in the maritime sector.
@@ -99,12 +99,12 @@
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div class="text-center space-y-4">
-          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
+          <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Context</h2>
 
           <!-- UPDATED VISUAL HEADING -->
-          <h3 class="text-6xl md:text-7xl font-black text-white leading-[1.05]">
-            Maritime decarbonization is entering a
-            <span class="text-primary block">compliance-driven phase</span>
+          <h3 class="text-4xl md:text-5xl font-black text-white leading-[1.05]">
+            Maritime Decarbonization is entering a
+            <span class="text-primary block">Compliance-driven phase</span>
           </h3>
         </div>
 
@@ -178,7 +178,7 @@
         <h3 class="text-4xl font-bold text-white">Sustivon</h3>
 
         <p class="text-white/80">
-          Sustivon is an IISc and NUS incubated venture focused on climate compliance and emissions intelligence in maritime systems.
+          Sustivon is a women-led IISc and NUS incubated venture focused on climate compliance and emissions intelligence in maritime systems.
         </p>
 
         <p class="text-white/60">
@@ -222,13 +222,13 @@ const contextCards = [
 
 const panels = [
   {
-    title: 'Maritime Decarbonization in Practice',
-    subtitle: 'Regulation, economics, and data in a single operational lens',
+    title: 'From Penalty to Profit: Turning Decarbonization into a Competitive Edge',
+    subtitle: 'Cost exposure, fuel strategy, and emissions intelligence as drivers of competitive positioning',
     points: [
-      'How EU ETS, CII, and FuelEU Maritime shape real decisions',
-      'Cost implications across routes and fleets',
-      'Role of emissions data in operational strategy',
-      'Where technology meaningfully impacts outcomes'
+      'Managing cost exposure under EU ETS and FuelEU Maritime',
+      'Fuel strategy as a lever for long-term competitiveness',
+      'Using emissions data for operational and strategic decisions',
+      'Where compliance transitions into commercial advantage'
     ],
   },
 ]
