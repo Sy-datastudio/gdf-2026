@@ -54,7 +54,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
 
     <!-- EVENT BAND -->
     <section class="py-24 px-6 border-y border-white/10">
