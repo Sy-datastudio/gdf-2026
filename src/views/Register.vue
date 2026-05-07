@@ -22,14 +22,15 @@
         </div>
 
         <button
-          class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
-        >
-          Register Another Attendee
-        </button>
+  @click="resetForm"
+  class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
+>
+  Register Another Attendee
+</button>
 
         <div class="pt-4">
           <button
-            @click="$emit('navigate', 'home')"
+            @click="scrollTo('home')"
             class="text-xs font-bold uppercase tracking-widest text-black/60 hover:text-white transition"
           >
             Back to Home
