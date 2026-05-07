@@ -14,7 +14,7 @@
         <div class="hidden sm:flex flex-col leading-tight border-l border-primary/20 pl-3">
           
           <!-- Top line: Global (subtle) -->
-          <span class="text-[10px] font-bold tracking-widest uppercase text-black/40">
+          <span class="text-[10px] font-bold tracking-widest uppercase text-black/90">
             Global
           </span>
 
@@ -24,7 +24,7 @@
           </span>
 
           <!-- Edition -->
-          <span class="text-[10px] uppercase tracking-widest text-black/40">
+          <span class="text-[10px] uppercase tracking-widest text-black/90">
             Edition 01 — Maritime
           </span>
 
@@ -36,14 +36,14 @@
         
         <a 
           href="#home"
-          class="text-sm font-medium text-black/70 hover:text-primary transition-colors cursor-pointer tracking-wide"
+          class="text-sm font-medium text-black/90 hover:text-primary transition-colors cursor-pointer tracking-wide"
         >
           Overview
         </a>
 
         <a 
           href="#speakers"
-          class="text-sm font-medium text-black/70 hover:text-primary transition-colors cursor-pointer tracking-wide"
+          class="text-sm font-medium text-black/90 hover:text-primary transition-colors cursor-pointer tracking-wide"
         >
           Contributors
         </a>
