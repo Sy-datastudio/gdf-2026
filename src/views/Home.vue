@@ -49,15 +49,19 @@
           </div>
         </div>
 
-<!-- BLENDED HERO IMAGE -->
 <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[50%] pointer-events-none">
-  <img 
-    src="/ship-Emissions-image.jpeg"
-    class="w-full opacity-75 mix-blend-lighten
-    [mask-image:linear-gradient(to_left,black 60%,transparent)]"
-  />
+  <div class="relative w-full">
+    
+    <img 
+      src="/ship-Emissions-image.jpeg"
+      class="w-full opacity-75 mix-blend-lighten"
+    />
+
+    <!-- FADE OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-l from-transparent via-black/60 to-black"></div>
+
+  </div>
 </div>
-    </div>
 
     <!-- EVENT BAND -->
     <section class="py-24 px-6 border-y border-white/10">
