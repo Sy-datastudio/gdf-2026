@@ -80,7 +80,7 @@
     </section>
 
 <!-- WHY PARTICIPATE (CENTERED + BALANCED) -->
-<section class="py-32 px-6 bg-primary/90 text-background">
+<section class="py-32 px-6 bg-primary/80 text-background">
   <div class="max-w-7xl mx-auto text-center space-y-12">
 
     <!-- UPDATED HEADING -->
