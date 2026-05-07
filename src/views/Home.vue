@@ -10,6 +10,8 @@
 
     <!-- HERO -->
     <div class="relative min-h-[95vh] flex items-center px-6">
+
+      <!-- GRID CONTENT -->
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <div class="space-y-8">
@@ -49,19 +51,20 @@
           </div>
         </div>
 
-<div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[50%] pointer-events-none">
-  <div class="relative w-full">
-    
-    <img 
-      src="/ship-Emissions-image.jpeg"
-      class="w-full opacity-75 mix-blend-lighten"
-    />
+      </div>
 
-    <!-- FADE OVERLAY -->
-    <div class="absolute inset-0 bg-gradient-to-l from-transparent via-black/60 to-black"></div>
+      <!-- ✅ BLENDED IMAGE (OUTSIDE GRID, INSIDE HERO) -->
+      <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[50%] pointer-events-none">
+        <div class="relative w-full">
+          <img 
+            src="/ship-Emissions-image.jpeg"
+            class="w-full opacity-75 mix-blend-lighten"
+          />
+          <div class="absolute inset-0 bg-gradient-to-l from-transparent via-black/60 to-black"></div>
+        </div>
+      </div>
 
-  </div>
-</div>
+    </div>
 
     <!-- EVENT BAND -->
     <section class="py-24 px-6 border-y border-white/10">
@@ -96,7 +99,7 @@
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
 
         <h3 class="text-4xl font-bold text-white">
-          A platform for <span class="text-primary">trategic Maritime dialogue</span>
+          A platform for <span class="text-primary">strategic maritime dialogue</span>
         </h3>
 
         <p class="text-white/70 max-w-2xl mx-auto">
@@ -185,48 +188,3 @@
 
   </div>
 </template>
-
-<script setup lang="ts">
-import { Shield, DollarSign, BarChart3, Fuel } from 'lucide-vue-next'
-
-const scrollTo = (id: string) => {
-  const el = document.getElementById(id)
-  if (!el) return
-
-  const yOffset = -100
-  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth',
-  })
-}
-
-const thematicIcons = [
-  { icon: Shield, label: 'REGULATION' },
-  { icon: DollarSign, label: 'COST' },
-  { icon: BarChart3, label: 'EMISSIONS DATA' },
-  { icon: Fuel, label: 'FUEL STRATEGY' },
-]
-
-const contextCards = [
-  { icon: Shield, title: 'Regulatory Convergence', text: 'IMO targets, EU ETS inclusion, and FuelEU Maritime are creating enforceable, cost-linked obligations.' },
-  { icon: DollarSign, title: 'Cost Exposure', text: 'Carbon pricing and fuel differentials are directly impacting voyage economics and fleet strategy.' },
-  { icon: BarChart3, title: 'Measurement Becomes Control', text: 'MRV, CII, and real-time emissions tracking are turning data into an operational constraint.' },
-]
-
-const panels = [
-  {
-    title: 'From Penalty to Profit: Turning Decarbonization into a Competitive Edge',
-    subtitle: 'Cost exposure, fuel strategy, and emissions intelligence as drivers of competitive positioning',
-    points: [
-      'Managing cost exposure under EU ETS and FuelEU Maritime',
-      'Fuel strategy as a lever for long-term competitiveness',
-      'Using emissions data for operational and strategic decisions',
-      'Where compliance transitions into commercial advantage'
-    ],
-  },
-]
-
-const mainPanel = panels[0]
-</script>
