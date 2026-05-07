@@ -25,7 +25,7 @@
           </h1>
 
           <p class="text-lg text-white/80 max-w-xl">
-            A cross-sector dialogue shaping the future of climate action in the Maritime industry.
+            Maritime decarbonization is no longer a future goal—it is an operational constraint. This forum examines how leading actors are responding in practice.
           </p>
 
           <!-- ICON STRIP -->
@@ -39,13 +39,11 @@
           </div>
 
           <div class="flex gap-4 pt-4">
-      
             <a href="#register">
-  <button class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
-    Register
-  </button>
-</a>
-
+              <button class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg">
+                Join the Forum
+              </button>
+            </a>
           </div>
         </div>
 
@@ -67,15 +65,15 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <p class="text-xl md:text-2xl text-primary font-semibold">
-            10:30 AM CET<br/>2:00 PM IST<br/>4:30 PM SGT
+          <p class="text-xl md:text-2xl text-primary font-semibold font-bold">
+            10:30 AM CET<br/>2:00 PM IST
           </p>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Location</p>
-          <p class="text-xl md:text-2xl text-primary font-semibold">
-            Virtual (Zoom Webinar)
+          <p class="text-xl md:text-2xl text-primary font-semibold font-bold">
+            Virtual (Closed Zoom Session)
           </p>
         </div>
 
@@ -87,22 +85,22 @@
       <div class="max-w-4xl mx-auto space-y-8">
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
         <h3 class="text-4xl font-bold text-white">
-          A platform for <span class="text-primary">strategic climate dialogue</span>
+          A forum focused on <span class="text-primary">maritime decarbonization execution</span>
         </h3>
         <p class="text-white/70">
-          The Global Decarbonization Forum 2026 convenes leaders across policy, industry, and academia to move from commitment to execution.
+          This edition brings together policymakers, shipowners, operators, and technology providers navigating regulatory pressure, fuel uncertainty, and data-driven compliance in the maritime sector.
         </p>
       </div>
     </section>
 
-    <!-- WHY THIS MATTERS -->
+    <!-- CRITICAL CONTEXT -->
     <section class="py-32 px-6 border-y border-white/10">
       <div class="max-w-7xl mx-auto space-y-16">
 
         <div class="text-center space-y-4">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
           <h3 class="text-5xl font-black text-white">
-            Decarbonization is entering an <span class="text-primary">enforcement era</span>
+            Maritime decarbonization is entering a <span class="text-primary">compliance-driven phase</span>
           </h3>
         </div>
 
@@ -126,10 +124,10 @@
 
         <div>
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
-          <h3 class="text-5xl font-black text-white">Curated Discussions</h3>
+          <h3 class="text-5xl font-black text-white">Discussion Focus</h3>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10">
+        <div class="grid md:grid-cols-1 gap-10">
           <div v-for="(panel,i) in panels" :key="i"
             class="p-10 bg-white/5 border border-white/10 rounded-xl">
 
@@ -173,11 +171,11 @@
         <h3 class="text-4xl font-bold text-white">Sustivon</h3>
 
         <p class="text-white/80">
-          IISc and NUS incubated clean-tech venture working at the intersection of climate compliance, AI-driven intelligence, and transport decarbonization.
+          Sustivon is an IISc and NUS incubated venture focused on climate compliance and emissions intelligence in maritime systems.
         </p>
 
         <p class="text-white/60">
-          Focused on maritime and aviation, enabling Net Zero transitions through data-driven strategies.
+          The company works at the intersection of regulation, data, and operational strategy to enable Net Zero transitions in shipping.
         </p>
 
         <a href="https://www.sustivon.com" target="_blank"
@@ -185,7 +183,6 @@
           Visit Sustivon.com ↗
         </a>
 
-        <!-- CONTACT BUTTON -->
         <div class="mt-6">
           <a href="mailto:syeda@sustivon.com">
             <button class="px-8 py-4 border border-primary text-primary font-bold uppercase text-xs rounded-lg hover:bg-primary/10">
@@ -203,38 +200,35 @@
 <script setup lang="ts">
 import { Leaf, Globe, Zap, RefreshCw } from 'lucide-vue-next'
 
-
 const thematicIcons = [
-  { icon: Leaf, label: 'SUSTAINABILITY' },
-  { icon: Globe, label: 'GLOBAL IMPACT' },
-  { icon: Zap, label: 'CLEAN ENERGY' },
-  { icon: RefreshCw, label: 'NET ZERO' },
+  { icon: Leaf, label: 'REGULATORY PRESSURE' },
+  { icon: Globe, label: 'FUEL TRANSITION' },
+  { icon: Zap, label: 'EMISSIONS INTELLIGENCE' },
+  { icon: RefreshCw, label: 'COST EXPOSURE' },
 ]
 
 const contextCards = [
-  { icon: Globe, title: 'Global Acceleration', text: 'Regulatory frameworks are accelerating globally.' },
-  { icon: Zap, title: 'Structural Pressure', text: 'Transport sectors face transition pressure.' },
-  { icon: Globe, title: 'Data Advantage', text: 'Competitive advantage is data-driven.' },
+  { icon: Globe, title: 'Regulatory Convergence', text: 'IMO targets, EU ETS inclusion, and FuelEU Maritime are creating enforceable, cost-linked obligations.' },
+  { icon: Zap, title: 'Cost Exposure', text: 'Carbon pricing and fuel differentials are directly impacting voyage economics and fleet strategy.' },
+  { icon: Globe, title: 'Measurement Becomes Control', text: 'MRV, CII, and real-time emissions tracking are turning data into an operational constraint.' },
 ]
 
 const panels = [
   {
-    title: 'From Penalty to Profit',
-    subtitle: 'Regulation as Competitive Advantage',
-    points: ['Compliance as leverage', 'Policy economics', 'Fuel transition'],
-  },
-  {
-    title: 'The AI Climate Leap',
-    subtitle: 'Data-Driven Execution',
-    points: ['Real-time emissions', 'AI optimization', 'Decision systems'],
+    title: 'Maritime Decarbonization in Practice',
+    subtitle: 'Regulation, economics, and data in a single operational lens',
+    points: [
+      'How EU ETS, CII, and FuelEU Maritime shape real decisions',
+      'Cost implications across routes and fleets',
+      'Role of emissions data in operational strategy',
+      'Where technology meaningfully impacts outcomes'
+    ],
   },
 ]
 
 const schedule = [
-  { time: '10 min', label: 'Welcome & framing' },
-  { time: '35 min', label: 'Panel 1' },
-  { time: '5 min', label: 'Transition' },
-  { time: '35–45 min', label: 'Panel 2' },
-  { time: '5 min', label: 'Closing' },
+  { time: '10 min', label: 'Opening Brief' },
+  { time: '75–80 min', label: 'Panel Discussion' },
+  { time: '5 min', label: 'Closing Remarks' },
 ]
 </script>
