@@ -2,7 +2,7 @@
   <section id="speakers" class="pt-20">
 
     <!-- HEADER -->
-    <header class="py-32 px-6 bg-background-accent border-b border-accent grid-structure">
+    <header class="py-32 px-6 bg-background-accent/80 border-b border-accent grid-structure">
       <div class="max-w-7xl mx-auto space-y-8">
 
         <div class="flex items-center gap-3">
