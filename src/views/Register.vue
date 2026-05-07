@@ -14,21 +14,22 @@
             Registration Received
           </h2>
 
-          <!-- FIXED -->
           <p class="text-black/70 leading-relaxed font-light">
             You’re successfully registered for the Global Decarbonization Forum 2026.
             Event access details will be shared with you via email shortly.
           </p>
         </div>
 
+        <!-- ✅ FIXED -->
         <button
-  @click="resetForm"
-  class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
->
-  Register Another Attendee
-</button>
+          @click="resetForm"
+          class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
+        >
+          Register Another Attendee
+        </button>
 
         <div class="pt-4">
+          <!-- ✅ FIXED -->
           <button
             @click="scrollTo('home')"
             class="text-xs font-bold uppercase tracking-widest text-black/60 hover:text-white transition"
@@ -61,14 +62,12 @@
             </span>
           </h1>
 
-          <!-- FIXED VISIBILITY -->
           <p class="text-xl text-white/80 font-light leading-relaxed">
             Join the Global Decarbonization Forum 2026 and connect with leaders across maritime,
             policy, and clean technology driving the transition forward.
           </p>
         </div>
 
-        <!-- INFO BLOCK -->
         <div class="space-y-8 py-8 border-y border-white/10">
 
           <div class="flex gap-4">
@@ -76,7 +75,6 @@
               <Info :size="20" :stroke-width="1.5" />
             </div>
 
-            <!-- FIXED -->
             <p class="text-xs font-bold uppercase tracking-wider text-white/70 leading-relaxed">
               Registration confirmation and joining details will be shared via email.
             </p>
@@ -88,7 +86,6 @@
               <h5 class="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">
                 Platform
               </h5>
-
               <span class="text-sm font-semibold text-white">
                 Virtual / Zoom
               </span>
@@ -98,7 +95,6 @@
               <h5 class="text-[10px] font-bold uppercase tracking-widest text-white/50 mb-2">
                 Access
               </h5>
-
               <span class="text-sm font-semibold text-white">
                 Open to registered attendees
               </span>
@@ -117,82 +113,52 @@
 
         <form @submit.prevent="handleSubmit" class="space-y-10 relative z-10">
 
-          <!-- ROW 1 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div class="space-y-3">
               <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <User :size="14" /> Full Name*
               </label>
-
-              <input
-                v-model="form.name"
-                required
-                type="text"
-                placeholder="Enter your name"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
-              />
+              <input v-model="form.name" required type="text" placeholder="Enter your name"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
             </div>
 
             <div class="space-y-3">
               <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Mail :size="14" /> Email*
               </label>
-
-              <input
-                v-model="form.email"
-                required
-                type="email"
-                placeholder="work@organization.com"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
-              />
+              <input v-model="form.email" required type="email" placeholder="work@organization.com"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
             </div>
 
           </div>
 
-          <!-- ROW 2 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div class="space-y-3">
               <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Building2 :size="14" /> Organization*
               </label>
-
-              <input
-                v-model="form.organization"
-                required
-                type="text"
-                placeholder="Company or Institution"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
-              />
+              <input v-model="form.organization" required type="text" placeholder="Company or Institution"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
             </div>
 
             <div class="space-y-3">
               <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
                 <Briefcase :size="14" /> Role / Designation
               </label>
-
-              <input
-                v-model="form.role"
-                type="text"
-                placeholder="e.g. Sustainability Lead"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm"
-              />
+              <input v-model="form.role" type="text" placeholder="e.g. Sustainability Lead"
+                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
             </div>
 
           </div>
 
-          <!-- REGION -->
           <div class="space-y-3">
             <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
               <Map :size="14" /> Region*
             </label>
-
-            <select
-              v-model="form.region"
-              required
-              class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black text-sm"
-            >
+            <select v-model="form.region" required
+              class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black text-sm">
               <option value="">Select Region</option>
               <option value="europe">Europe</option>
               <option value="asia-pacific">Asia Pacific</option>
@@ -201,17 +167,13 @@
             </select>
           </div>
 
-          <!-- BUTTON -->
           <div class="pt-8 flex flex-col gap-6">
-            <button
-              type="submit"
-              class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
-            >
+            <button type="submit"
+              class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]">
               Register Now
               <ArrowRight :size="16" />
             </button>
 
-            <!-- FIXED -->
             <p class="text-[10px] text-center text-black/50 font-bold uppercase tracking-widest">
               By registering, you agree to receive event-related communications.
             </p>
@@ -227,10 +189,6 @@
 import { ref } from 'vue'
 import { Mail, User, Building2, Briefcase, Map, Send, Info, ArrowRight } from 'lucide-vue-next'
 
-defineEmits<{
-  navigate: [pageId: string]
-}>()
-
 const submitted = ref(false)
 
 const form = ref({
@@ -240,6 +198,33 @@ const form = ref({
   role: '',
   region: '',
 })
+
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const yOffset = -100
+  const y = el.getBoundingClientRect().top + window.scrollY + yOffset
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth',
+  })
+}
+
+const resetForm = () => {
+  submitted.value = false
+
+  form.value = {
+    name: '',
+    email: '',
+    organization: '',
+    role: '',
+    region: '',
+  }
+
+  scrollTo('register')
+}
 
 const handleSubmit = async () => {
   const response = await fetch('https://formspree.io/f/xdayrbdd', {
