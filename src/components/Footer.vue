@@ -31,30 +31,30 @@
 
         <ul class="space-y-3">
           <li>
-            <a 
-              href="#home"
-              class="text-sm text-text-main/80 hover:text-primary transition-colors"
+            <button 
+              @click="scrollTo('home')"
+              class="text-sm text-text-main/80 hover:text-primary transition-colors text-left"
             >
               Overview
-            </a>
+            </button>
           </li>
 
           <li>
-            <a 
-              href="#speakers"
-              class="text-sm text-text-main/80 hover:text-primary transition-colors"
+            <button 
+              @click="scrollTo('speakers')"
+              class="text-sm text-text-main/80 hover:text-primary transition-colors text-left"
             >
               Contributors
-            </a>
+            </button>
           </li>
 
           <li>
-            <a 
-              href="#register"
-              class="text-sm text-text-main/80 hover:text-primary transition-colors"
+            <button 
+              @click="scrollTo('register')"
+              class="text-sm text-text-main/80 hover:text-primary transition-colors text-left"
             >
               Join the Forum
-            </a>
+            </button>
           </li>
         </ul>
       </div>
@@ -103,4 +103,17 @@
 
 <script setup lang="ts">
 import { Leaf, Mail, Globe } from 'lucide-vue-next'
+
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const yOffset = -100
+  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth',
+  })
+}
 </script>
