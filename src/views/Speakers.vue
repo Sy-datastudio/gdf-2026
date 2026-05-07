@@ -81,11 +81,11 @@
 
     <!-- WHY PARTICIPATE (CENTERED + BALANCED) -->
     <section class="py-32 px-6 bg-primary text-background">
-      <div class="max-w-4xl mx-auto text-center space-y-12">
+      <div class="max-w-7xl mx-auto text-center space-y-12">
 
         <h3 class="text-5xl font-black uppercase">Why Participate?</h3>
 
-        <div class="space-y-4 max-w-2xl mx-auto">
+        <div class="max-w-2xl mx-auto space-y-4">
           <div v-for="(item,i) in whyParticipate" :key="i"
             class="flex gap-4 p-6 border border-white/10 rounded-xl bg-white/10 backdrop-blur-sm">
 
@@ -100,7 +100,7 @@
 
     <!-- PROGRAMME TIMELINE (UPDATED FLOW) -->
     <section class="py-32 px-6">
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-7xl mx-auto">
 
         <h3 class="text-4xl font-bold mb-12 text-center text-white">
           Programme Overview
