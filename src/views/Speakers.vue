@@ -194,7 +194,7 @@ const whyParticipate = [
 
 const programme = [
   { time: '10 min', label: 'Context: Regulatory and economic pressure' },
-  { time: '75–80 min', label: 'Discussion: Turning constraint into competitive edge' },
+  { time: '45 min', label: 'Discussion: Turning constraint into competitive edge' },
   { time: '5 min', label: 'Key takeaways and closing reflections' },
 ]
 </script>
