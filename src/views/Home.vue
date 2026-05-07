@@ -2,7 +2,7 @@
   <div id="home" class="pt-20 relative text-white overflow-hidden">
 
     <!-- BACKGROUND -->
-    <div class="absolute inset-0 -z-10">
+    <div class="fixed inset-0 -z-10">
       <img src="/dark-setting-globe.jpg" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/80"></div>
