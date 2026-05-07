@@ -24,15 +24,16 @@
             FORUM <span class="text-primary">2026</span>
           </h1>
 
-          <p class="text-lg text-white/80 max-w-xl">
-            Maritime decarbonization is no longer a future goal—it is an operational constraint. This forum examines how leading actors are responding in practice.
+          <!-- UPDATED HERO LINE -->
+          <p class="text-lg text-white/80 max-w-lg">
+            Decarbonization is now a constraint. The question is how the maritime industry responds.
           </p>
 
           <!-- ICON STRIP -->
           <div class="flex gap-6 pt-4">
-            <div v-for="(item,i) in thematicIcons" :key="i" class="flex flex-col items-center gap-2">
+            <div v-for="(item,i) in thematicIcons" :key="i" class="flex flex-col items-center gap-3">
               <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                <component :is="item.icon" :size="22"/>
+                <component :is="item.icon" :size="24"/>
               </div>
               <span class="text-[10px] tracking-widest text-white/50">{{ item.label }}</span>
             </div>
@@ -65,14 +66,14 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <p class="text-xl md:text-2xl text-primary font-semibold font-bold">
+          <p class="text-xl md:text-2xl text-primary font-bold">
             10:30 AM CET<br/>2:00 PM IST
           </p>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Location</p>
-          <p class="text-xl md:text-2xl text-primary font-semibold font-bold">
+          <p class="text-xl md:text-2xl text-primary font-bold">
             Virtual (Closed Zoom Session)
           </p>
         </div>
@@ -99,8 +100,11 @@
 
         <div class="text-center space-y-4">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Critical Context</h2>
-          <h3 class="text-5xl font-black text-white">
-            Maritime decarbonization is entering a <span class="text-primary">compliance-driven phase</span>
+
+          <!-- UPDATED VISUAL HEADING -->
+          <h3 class="text-6xl md:text-7xl font-black text-white leading-[1.05]">
+            Maritime decarbonization is entering a
+            <span class="text-primary block">compliance-driven phase</span>
           </h3>
         </div>
 
@@ -120,21 +124,24 @@
 
     <!-- AGENDA -->
     <section id="agenda" class="py-32 px-6">
-      <div class="max-w-7xl mx-auto space-y-16">
+      <div class="max-w-7xl mx-auto space-y-24">
 
-        <div>
+        <div class="text-center">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
-          <h3 class="text-5xl font-black text-white">Discussion Focus</h3>
+          <h3 class="text-6xl font-black text-white mt-2">
+            Discussion Focus
+          </h3>
         </div>
 
-        <div class="grid md:grid-cols-1 gap-10">
+        <!-- CENTERED PANEL -->
+        <div class="flex justify-center">
           <div v-for="(panel,i) in panels" :key="i"
-            class="p-10 bg-white/5 border border-white/10 rounded-xl">
+            class="p-12 md:p-16 bg-white/5 border border-white/10 rounded-xl max-w-4xl w-full">
 
-            <h4 class="text-2xl font-bold text-white">{{ panel.title }}</h4>
-            <p class="text-primary text-xs uppercase mt-2">{{ panel.subtitle }}</p>
+            <h4 class="text-3xl font-bold text-white">{{ panel.title }}</h4>
+            <p class="text-primary text-xs uppercase mt-3">{{ panel.subtitle }}</p>
 
-            <ul class="mt-4 text-white/70 text-sm space-y-2">
+            <ul class="mt-6 text-white/70 text-base space-y-3">
               <li v-for="(p,j) in panel.points" :key="j">• {{ p }}</li>
             </ul>
 
@@ -198,19 +205,19 @@
 </template>
 
 <script setup lang="ts">
-import { Leaf, Globe, Zap, RefreshCw } from 'lucide-vue-next'
+import { Shield, DollarSign, BarChart3, Fuel } from 'lucide-vue-next'
 
 const thematicIcons = [
-  { icon: Leaf, label: 'REGULATORY PRESSURE' },
-  { icon: Globe, label: 'FUEL TRANSITION' },
-  { icon: Zap, label: 'EMISSIONS INTELLIGENCE' },
-  { icon: RefreshCw, label: 'COST EXPOSURE' },
+  { icon: Shield, label: 'REGULATION' },
+  { icon: DollarSign, label: 'COST' },
+  { icon: BarChart3, label: 'EMISSIONS DATA' },
+  { icon: Fuel, label: 'FUEL STRATEGY' },
 ]
 
 const contextCards = [
-  { icon: Globe, title: 'Regulatory Convergence', text: 'IMO targets, EU ETS inclusion, and FuelEU Maritime are creating enforceable, cost-linked obligations.' },
-  { icon: Zap, title: 'Cost Exposure', text: 'Carbon pricing and fuel differentials are directly impacting voyage economics and fleet strategy.' },
-  { icon: Globe, title: 'Measurement Becomes Control', text: 'MRV, CII, and real-time emissions tracking are turning data into an operational constraint.' },
+  { icon: Shield, title: 'Regulatory Convergence', text: 'IMO targets, EU ETS inclusion, and FuelEU Maritime are creating enforceable, cost-linked obligations.' },
+  { icon: DollarSign, title: 'Cost Exposure', text: 'Carbon pricing and fuel differentials are directly impacting voyage economics and fleet strategy.' },
+  { icon: BarChart3, title: 'Measurement Becomes Control', text: 'MRV, CII, and real-time emissions tracking are turning data into an operational constraint.' },
 ]
 
 const panels = [
