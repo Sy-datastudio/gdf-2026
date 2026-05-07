@@ -16,7 +16,8 @@
           INVITATION TO <span class="text-primary">CONTRIBUTE</span>
         </h1>
 
-        <p class="text-xl text-text-muted max-w-3xl">
+        <!-- FIXED -->
+        <p class="text-xl text-white/80 max-w-3xl">
           A focused, high-level dialogue at the intersection of policy, industry, and research.
         </p>
 
@@ -27,23 +28,27 @@
     <section class="py-32 px-6">
       <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
 
+        <!-- LEFT -->
         <div class="space-y-12">
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">The Setting</h2>
-            <h3 class="text-4xl font-bold mt-2">Focus & Context</h3>
+            <!-- FIXED -->
+            <h3 class="text-4xl font-bold mt-2 text-white">Focus & Context</h3>
           </div>
 
-          <p class="text-lg text-text-muted">
+          <!-- FIXED -->
+          <p class="text-lg text-white/80">
             A curated group of stakeholders exploring actionable decarbonization pathways.
           </p>
 
-          <div class="bg-background-accent p-8 border border-accent space-y-6">
+          <div class="bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-xl space-y-6"">
             <h4 class="text-sm uppercase tracking-widest text-primary flex gap-2 items-center">
               <Users :size="18" /> Expected Audience
             </h4>
 
             <ul class="space-y-3">
-              <li v-for="(item,i) in audience" :key="i" class="flex gap-3 text-sm text-text-muted">
+              <!-- FIXED -->
+              <li v-for="(item,i) in audience" :key="i" class="flex gap-3 text-sm text-gray-700">
                 <span class="text-primary opacity-40">0{{ i+1 }}</span>
                 {{ item }}
               </li>
@@ -51,21 +56,24 @@
           </div>
         </div>
 
+        <!-- RIGHT -->
         <div class="space-y-12">
           <div>
             <h2 class="text-xs uppercase tracking-[0.4em] text-primary">Mission</h2>
-            <h3 class="text-4xl font-bold mt-2">Intended Outcomes</h3>
+            <!-- FIXED -->
+            <h3 class="text-4xl font-bold mt-2 text-white">Intended Outcomes</h3>
           </div>
 
           <div class="space-y-6">
             <div v-for="(o,i) in outcomes" :key="i"
-              class="flex gap-4 p-6 border border-accent hover:border-primary/20">
+              class="flex gap-4 p-6 border border-white/10 rounded-xl bg-white/5 hover:border-primary/30 transition">
 
               <component :is="o.icon" class="text-primary" :size="20" />
 
               <div>
-                <h5 class="font-bold text-sm uppercase">{{ o.title }}</h5>
-                <p class="text-sm text-text-muted">{{ o.desc }}</p>
+                <h5 class="font-bold text-sm uppercase text-white">{{ o.title }}</h5>
+                <!-- FIXED -->
+                <p class="text-sm text-white/70">{{ o.desc }}</p>
               </div>
 
             </div>
@@ -85,7 +93,7 @@
 
         <div class="space-y-4">
           <div v-for="(item,i) in whyParticipate" :key="i"
-            class="flex gap-4 p-6 border border-accent/20 rounded-lg">
+            class="flex gap-4 p-6 border border-white/10 rounded-xl bg-white/5">
 
             <CheckCircle :size="18" />
             <span>{{ item }}</span>
@@ -100,7 +108,8 @@
     <section class="py-32 px-6">
       <div class="max-w-4xl mx-auto">
 
-        <h3 class="text-4xl font-bold mb-12 text-center">
+        <!-- FIXED -->
+        <h3 class="text-4xl font-bold mb-12 text-center text-white">
           Programme Overview
         </h3>
 
@@ -114,11 +123,12 @@
                 {{ i+1 }}
               </div>
 
-              <div class="flex-1 p-6 border border-accent rounded-lg hover:border-primary/30 transition">
+              <div class="flex-1 p-6 border border-white/10 rounded-xl bg-white/5 hover:border-primary/30 transition">
                 <div class="text-primary text-sm font-semibold mb-1">
                   {{ p.time }}
                 </div>
-                <div class="text-lg font-medium">
+                <!-- FIXED -->
+                <div class="text-lg font-medium text-white">
                   {{ p.label }}
                 </div>
               </div>
@@ -127,7 +137,8 @@
           </div>
         </div>
 
-        <div class="mt-10 text-xs uppercase tracking-widest text-text-muted space-y-2 opacity-70 text-center">
+        <!-- FIXED -->
+        <div class="mt-10 text-xs uppercase tracking-widest text-white/50 space-y-2 opacity-70 text-center">
           <div>Format: Virtual Zoom webinar</div>
           <div>Style: Moderated panel discussions</div>
           <div>Group: Small format for depth</div>
@@ -140,7 +151,7 @@
     <section class="py-40 px-6 text-center wave-pattern">
       <div class="space-y-8">
 
-        <h3 class="text-4xl font-black uppercase">
+        <h3 class="text-4xl font-black uppercase text-white">
           We would be <span class="text-primary">honored</span> to have your participation
         </h3>
 
