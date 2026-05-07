@@ -155,11 +155,12 @@
         <div class="flex justify-center">
           <a
             href="mailto:syeda@sustivon.com"
-            class="w-[240px] px-10 py-4 border border-primary text-primary font-bold uppercase rounded-lg text-center"
+            class="w-[240px] px-8 py-5 border border-primary text-primary font-bold uppercase rounded-lg text-center"
           >
             Contact Organizer
           </a>
         </div>
+        
 
       </div>
     </section>
