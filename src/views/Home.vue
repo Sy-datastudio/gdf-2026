@@ -165,7 +165,7 @@
         </p>
 
         <p class="text-white/60">
-          Focused on maritime systems, enabling data-driven pathways to Net Zero.
+          Focused on decarbonization systems, enabling data-driven pathways to Net Zero.
         </p>
 
         <a href="https://www.sustivon.com" target="_blank"
