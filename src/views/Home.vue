@@ -181,6 +181,84 @@
       </div>
     </section>
 
+    <!-- UPCOMING EDITIONS -->
+<section class="py-32 px-6 border-t border-white/10">
+  <div class="max-w-5xl mx-auto text-center space-y-16">
+
+    <!-- HEADER -->
+    <div class="space-y-4">
+      <h2 class="text-xs tracking-[0.4em] text-primary uppercase">
+        The Series
+      </h2>
+
+      <h3 class="text-5xl font-black text-white">
+        A multi-edition <span class="text-primary">decarbonization journey</span>
+      </h3>
+
+      <p class="text-white/70 max-w-2xl mx-auto">
+        Edition 01 marks the beginning. The series expands into policy, aviation, and trade-linked carbon systems.
+      </p>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="relative">
+
+      <!-- vertical line -->
+      <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2"></div>
+
+      <div class="space-y-16">
+
+        <!-- EDITION 01 (ACTIVE) -->
+        <div class="flex flex-col items-center space-y-4">
+          <div class="w-4 h-4 rounded-full bg-primary shadow-[0_0_20px_#1da282] animate-pulse"></div>
+
+          <p class="text-xs uppercase tracking-widest text-primary">
+            Edition 01 — Maritime
+          </p>
+
+          <h4 class="text-xl font-bold text-white">
+            Live Now
+          </h4>
+        </div>
+
+        <!-- EDITION 02 -->
+        <div class="flex flex-col items-center space-y-4 opacity-80">
+          <div class="w-3 h-3 rounded-full bg-white/30"></div>
+
+          <p class="text-xs uppercase tracking-widest text-white/50">
+            Edition 02 — MNRE
+          </p>
+
+          <h4 class="text-lg text-white/70">
+            Coming Soon
+          </h4>
+        </div>
+
+        <!-- EDITION 03 -->
+        <div class="flex flex-col items-center space-y-4 opacity-60">
+          <div class="w-3 h-3 rounded-full bg-white/20"></div>
+
+          <p class="text-xs uppercase tracking-widest text-white/40">
+            Edition 03 — Aviation
+          </p>
+        </div>
+
+        <!-- EDITION 04 -->
+        <div class="flex flex-col items-center space-y-4 opacity-40">
+          <div class="w-3 h-3 rounded-full bg-white/10"></div>
+
+          <p class="text-xs uppercase tracking-widest text-white/30">
+            Edition 04 — CBAM
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
   </div>
 </template>
 
