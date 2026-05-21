@@ -13,7 +13,7 @@
         </div>
 
         <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase">
-          INVITATION TO <span class="text-primary">CONTRIBUTE</span>
+          INVITATION TO <span class="text-primary">JOIN</span>
         </h1>
 
         <!-- FIXED CONTRAST -->
@@ -107,7 +107,7 @@
       <div class="max-w-7xl mx-auto">
 
         <h3 class="text-4xl font-bold mb-12 text-center text-white">
-          Programme Overview
+          Session Timeline
         </h3>
 
         <div class="relative">
@@ -138,7 +138,6 @@
         <div class="mt-10 text-xs uppercase tracking-widest text-white/80 space-y-2 text-center">
           <div>Format: Virtual Zoom webinar</div>
           <div>Style: Moderated panel discussion</div>
-          <div>Group: Small format for depth</div>
         </div>
 
       </div>
