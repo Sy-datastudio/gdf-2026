@@ -44,7 +44,7 @@
               @click="scrollTo('register')"
               class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg hover:opacity-90 transition"
             >
-              Join the Forum
+              Register
             </button>
           </div>
         </div>
@@ -62,7 +62,7 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
-          <h3 class="text-4xl font-bold text-primary">June 3, 2026</h3>
+          <h3 class="text-4xl font-bold text-primary">June 11, 2026</h3>
         </div>
 
         <div>
@@ -73,9 +73,9 @@
         </div>
 
         <div>
-          <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Location</p>
+          <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Platform</p>
           <p class="text-xl md:text-2xl text-primary font-bold">
-            Virtual (Closed Zoom Session)
+            Virtual (Zoom)
           </p>
         </div>
 
