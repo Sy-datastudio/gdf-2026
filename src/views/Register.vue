@@ -95,7 +95,7 @@
           />
 
           <p class="mt-6 text-xs uppercase tracking-widest text-white/70">
-            Or scan to register instantly
+            Or scan to register
           </p>
 
         </div>
