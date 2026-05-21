@@ -3,26 +3,28 @@
     
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       
-      <!-- BRAND -->
-      <div class="space-y-6">
-        <div class="flex items-center gap-3">
-          <Leaf :size="24" class="text-primary" />
-          <div class="flex flex-col leading-tight">
-            <span class="text-sm font-bold tracking-tight text-text-main">
-              Sustivon
-            </span>
-            <span class="text-xs font-semibold text-primary tracking-wide">
-              Decarbonization Series
-            </span>
-          </div>
-        </div>
+<!-- BRAND -->
+<div class="space-y-6">
 
-        <p class="text-sm text-text-main/80 leading-relaxed max-w-xs">
-          A focused dialogue on maritime decarbonization, exploring how regulatory pressure,
-          cost exposure, and emissions intelligence are shaping competitive strategy.
-        </p>
-      </div>
+  <div class="flex flex-col leading-tight">
 
+    <span class="text-sm font-bold tracking-tight text-black">
+      Global
+    </span>
+
+    <span class="text-sm font-bold tracking-tight text-primary">
+      Decarbonization Series
+    </span>
+
+  </div>
+
+  <p class="text-sm text-text-main/80 leading-relaxed max-w-xs">
+    A multi-edition platform examining how decarbonization is reshaping
+    industry strategy, regulatory frameworks, and competitive advantage across sectors.
+  </p>
+
+</div>
+      
       <!-- LINKS -->
       <div class="space-y-6">
         <h4 class="text-xs font-bold uppercase tracking-widest text-primary">
