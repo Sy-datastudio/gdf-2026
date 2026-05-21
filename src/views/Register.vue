@@ -1,48 +1,8 @@
 <template>
   <div id="register" class="pt-20">
 
-    <!-- Success State -->
-    <div v-if="submitted" class="min-h-screen flex items-center justify-center px-6 py-32 wave-pattern">
-      <div class="max-w-lg w-full bg-background border border-accent p-12 text-center space-y-8 shadow-2xl shadow-primary/5 rounded-[8px]">
-
-        <div class="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center text-primary mx-auto">
-          <Send :size="32" />
-        </div>
-
-        <div class="space-y-4">
-          <h2 class="text-3xl font-bold tracking-tight uppercase text-black">
-            Registration Received
-          </h2>
-
-          <p class="text-black/70 leading-relaxed font-light">
-            You’re successfully registered for the Global Decarbonization Forum 2026.
-            Event access details will be shared with you via email shortly.
-          </p>
-        </div>
-
-        <!-- ✅ FIXED -->
-        <button
-          @click="resetForm"
-          class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]"
-        >
-          Register Another Attendee
-        </button>
-
-        <div class="pt-4">
-          <!-- ✅ FIXED -->
-          <button
-            @click="scrollTo('home')"
-            class="text-xs font-bold uppercase tracking-widest text-black/60 hover:text-white transition"
-          >
-            Back to Home
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- FORM -->
-    <div v-else class="max-w-7xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+    <!-- MAIN SECTION -->
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
 
       <!-- LEFT SIDE -->
       <div class="lg:col-span-5 space-y-12">
@@ -76,7 +36,7 @@
             </div>
 
             <p class="text-xs font-bold uppercase tracking-wider text-white/70 leading-relaxed">
-              Registration confirmation and joining details will be shared via email.
+              Registration will be completed via Google Form. You may use the button or scan the QR code below.
             </p>
           </div>
 
@@ -106,135 +66,46 @@
 
       </div>
 
-      <!-- FORM -->
-      <div class="lg:col-span-7 bg-background shadow-2xl shadow-primary/5 border border-accent p-8 md:p-16 grid-structure relative overflow-hidden rounded-[8px]">
+      <!-- RIGHT SIDE -->
+      <div class="lg:col-span-7 bg-background shadow-2xl shadow-primary/5 border border-accent p-8 md:p-16 grid-structure relative overflow-hidden rounded-[8px] flex flex-col items-center justify-center gap-10">
 
         <div class="absolute inset-0 wave-pattern opacity-5 pointer-events-none"></div>
 
-        <form @submit.prevent="handleSubmit" class="space-y-10 relative z-10">
+        <!-- REGISTER BUTTON FIRST -->
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative z-10"
+        >
+          <button
+            class="px-12 py-5 bg-primary text-black font-bold uppercase text-xs tracking-[0.25em] rounded-lg hover:opacity-90 transition"
+          >
+            Register Now
+          </button>
+        </a>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- QR CODE -->
+        <div class="p-10 border border-accent rounded-xl text-center relative z-10">
 
-            <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
-                <User :size="14" /> Full Name*
-              </label>
-              <input v-model="form.name" required type="text" placeholder="Enter your name"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
-            </div>
+          <img 
+            src="/qr-code.svg" 
+            alt="Scan to register"
+            class="w-52 h-52 mx-auto"
+          />
 
-            <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
-                <Mail :size="14" /> Email*
-              </label>
-              <input v-model="form.email" required type="email" placeholder="work@organization.com"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
-            </div>
+          <p class="mt-6 text-xs uppercase tracking-widest text-text-muted">
+            Or scan to register instantly
+          </p>
 
-          </div>
+        </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
-                <Building2 :size="14" /> Organization*
-              </label>
-              <input v-model="form.organization" required type="text" placeholder="Company or Institution"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
-            </div>
-
-            <div class="space-y-3">
-              <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
-                <Briefcase :size="14" /> Role / Designation
-              </label>
-              <input v-model="form.role" type="text" placeholder="e.g. Sustainability Lead"
-                class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black placeholder-white/40 text-sm" />
-            </div>
-
-          </div>
-
-          <div class="space-y-3">
-            <label class="text-xs font-bold uppercase tracking-widest text-black/60 flex items-center gap-2">
-              <Map :size="14" /> Region*
-            </label>
-            <select v-model="form.region" required
-              class="w-full bg-transparent border-b border-accent py-3 focus:outline-none focus:border-primary text-black text-sm">
-              <option value="">Select Region</option>
-              <option value="europe">Europe</option>
-              <option value="asia-pacific">Asia Pacific</option>
-              <option value="north-america">North America</option>
-              <option value="others">Others</option>
-            </select>
-          </div>
-
-          <div class="pt-8 flex flex-col gap-6">
-            <button type="submit"
-              class="w-full py-5 bg-primary text-background font-bold tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/10 rounded-[8px]">
-              Register Now
-              <ArrowRight :size="16" />
-            </button>
-
-            <p class="text-[10px] text-center text-black/50 font-bold uppercase tracking-widest">
-              By registering, you agree to receive event-related communications.
-            </p>
-          </div>
-
-        </form>
       </div>
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Mail, User, Building2, Briefcase, Map, Send, Info, ArrowRight } from 'lucide-vue-next'
-
-const submitted = ref(false)
-
-const form = ref({
-  name: '',
-  email: '',
-  organization: '',
-  role: '',
-  region: '',
-})
-
-const scrollTo = (id: string) => {
-  const el = document.getElementById(id)
-  if (!el) return
-
-  const yOffset = -100
-  const y = el.getBoundingClientRect().top + window.scrollY + yOffset
-
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth',
-  })
-}
-
-const resetForm = () => {
-  submitted.value = false
-
-  form.value = {
-    name: '',
-    email: '',
-    organization: '',
-    role: '',
-    region: '',
-  }
-
-  scrollTo('register')
-}
-
-const handleSubmit = async () => {
-  const response = await fetch('https://formspree.io/f/xdayrbdd', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(form.value)
-  })
-
-  if (response.ok) {
-    submitted.value = true
-  }
-}
+import { Info } from 'lucide-vue-next'
 </script>
