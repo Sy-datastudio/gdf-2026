@@ -221,7 +221,7 @@
         <div class="flex flex-col items-center space-y-6 opacity-80">
           <div class="w-5 h-5 rounded-full bg-white/50"></div>
 
-          <p class="text-xs uppercase tracking-widest text-white/50">
+          <p class="text-xs uppercase tracking-widest text-white/60">
             Edition 02 — MNRE
           </p>
 
@@ -234,7 +234,7 @@
         <div class="flex flex-col items-center space-y-6 opacity-60">
           <div class="w-5 h-5 rounded-full bg-white/40"></div>
 
-          <p class="text-xs uppercase tracking-widest text-white/40">
+          <p class="text-xs uppercase tracking-widest text-white/50">
             Edition 03 — Aviation
           </p>
         </div>
@@ -243,7 +243,7 @@
         <div class="flex flex-col items-center space-y-6 opacity-40">
           <div class="w-5 h-5 rounded-full bg-white/30"></div>
 
-          <p class="text-xs uppercase tracking-widest text-white/30">
+          <p class="text-xs uppercase tracking-widest text-white/40">
             Edition 04 — CBAM
           </p>
         </div>
