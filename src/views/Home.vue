@@ -40,12 +40,17 @@
 
           <!-- CTA -->
           <div class="flex gap-4 pt-6 pb-6 md:pb-0">
-            <button 
-              @click="scrollTo('register')"
-              class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
-            >
-              Register
-            </button>
+            <a 
+  href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button 
+    class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
+  >
+    Register
+  </button>
+</a>
           </div>
         </div>
 
@@ -67,14 +72,14 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <p class="text-2xl md:text-2xl text-primary font-bold">
+          <p class="text-4xl md:text-2xl text-primary font-bold">
             10:30 AM CET<br/>2:00 PM IST
           </p>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Platform</p>
-          <p class="text-2xl md:text-2xl text-primary font-bold">
+          <p class="text-4xl md:text-2xl text-primary font-bold">
             Virtual (Zoom)
           </p>
         </div>
