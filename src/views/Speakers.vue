@@ -147,8 +147,8 @@
     <section class="py-40 px-6 text-center wave-pattern">
       <div class="space-y-8">
 
-        <h3 class="text-4xl font-black uppercase text-white">
-          We would be <span class="text-primary">honored</span> to have your participation
+        <h3 class="text-4xl font-black text-white">
+          For partnerships or participation inquiries
         </h3>
 
         <div class="flex justify-center">
