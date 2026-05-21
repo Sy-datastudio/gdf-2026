@@ -67,21 +67,21 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
-          <h3 class="text-4xl font-bold text-primary">June 11, 2026</h3>
+          <h4 class="text-4xl font-bold text-primary">June 11, 2026</h4>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <h3 class="text-4xl text-primary font-bold">
+          <h4 class="text-4xl text-primary font-bold">
             10:30 AM CET<br/>2:00 PM IST
-          </h3>
+          </h4>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Platform</p>
-          <h3 class="text-4xl text-primary font-bold">
+          <h4 class="text-4xl text-primary font-bold">
             Virtual (Zoom)
-          </h3>
+          </h4>
         </div>
 
       </div>
