@@ -42,7 +42,7 @@
           @click="scrollTo('speakers')"
           class="text-sm font-medium text-black/90 hover:text-primary transition-colors cursor-pointer tracking-wide"
         >
-          Contributors
+          Participants
         </button>
 
         <button 
