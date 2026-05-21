@@ -67,7 +67,7 @@
       </div>
 
       <!-- RIGHT SIDE -->
-      <div class="lg:col-span-7 bg-background shadow-2xl shadow-primary/5 border border-accent p-8 md:p-16 grid-structure relative overflow-hidden rounded-[8px] flex flex-col items-center justify-center gap-10">
+      <div class="lg:col-span-7 bg-background shadow-2xl shadow-primary/5 border border-accent p-10 md:p-20 grid-structure relative overflow-hidden rounded-[8px] flex flex-col items-center justify-center gap-12">
 
         <div class="absolute inset-0 wave-pattern opacity-5 pointer-events-none"></div>
 
@@ -76,7 +76,7 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
-          class="relative z-10"
+          class="relative z-10 w-full max-w-md"
         >
           <button
             class="px-12 py-5 bg-primary text-black font-bold uppercase text-xs tracking-[0.25em] rounded-lg hover:opacity-90 transition"
@@ -86,12 +86,12 @@
         </a>
 
         <!-- QR CODE -->
-        <div class="p-10 border border-accent rounded-xl text-center relative z-10">
+        <div class="relative z-10 text-center">
 
           <img 
             src="/qr-code.svg" 
             alt="Scan to register"
-            class="w-52 h-52 mx-auto"
+            class="relative z-10 text-center"
           />
 
           <p class="mt-6 text-xs uppercase tracking-widest text-text-muted">
