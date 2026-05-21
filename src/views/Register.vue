@@ -89,7 +89,7 @@
         <div class="p-10 border border-accent rounded-xl text-center relative z-10">
 
           <img 
-            src="/qr-code.svg.svg" 
+            src="/qr-code.svg" 
             alt="Scan to register"
             class="w-52 h-52 mx-auto"
           />
