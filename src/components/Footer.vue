@@ -68,10 +68,15 @@
         </h4>
 
         <ul class="space-y-3">
-          <li class="flex items-center gap-3 text-sm text-text-main/80">
-            <Mail :size="16" />
-            <span>syeda@sustivon.com</span>
-          </li>
+<li class="flex items-center gap-3 text-sm text-text-main/80">
+  <Mail :size="16" />
+  <a 
+    href="mailto:syeda@sustivon.com"
+    class="hover:text-primary transition-colors"
+  >
+    syeda@sustivon.com
+  </a>
+</li>
 
           <li class="flex items-center gap-3 text-sm text-text-main/80">
             <Globe :size="16" />
