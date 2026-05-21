@@ -76,10 +76,10 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
-          class="relative z-10 w-full max-w-md"
+          class="relative z-10 w-full flex justify-center"
         >
           <button
-            class="px-12 py-5 bg-primary text-black font-bold uppercase text-xs tracking-[0.25em] rounded-lg hover:opacity-90 transition"
+            class="w-full max-w-lg py-5 bg-primary text-black font-bold uppercase text-xs tracking-[0.25em] rounded-lg hover:opacity-90 transition"
           >
             Register Now
           </button>
@@ -91,10 +91,10 @@
           <img 
             src="/qr-code.svg" 
             alt="Scan to register"
-            class="relative z-10 text-center"
+            class="w-72 h-72 mx-auto rounded-2xl"
           />
 
-          <p class="mt-6 text-xs uppercase tracking-widest text-text-muted">
+          <p class="mt-6 text-xs uppercase tracking-widest text-white/70">
             Or scan to register instantly
           </p>
 
