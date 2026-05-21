@@ -67,7 +67,7 @@
       </div>
 
       <!-- RIGHT SIDE -->
-      <div class="lg:col-span-7 bg-background shadow-2xl shadow-primary/5 border border-accent p-10 md:p-20 grid-structure relative overflow-hidden rounded-[8px] flex flex-col items-center justify-center gap-12">
+      <div class="lg:col-span-7 p-10 md:p-20 relative flex flex-col items-center justify-center gap-12">
 
         <div class="absolute inset-0 wave-pattern opacity-5 pointer-events-none"></div>
 
