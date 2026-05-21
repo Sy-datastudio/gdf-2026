@@ -186,9 +186,9 @@ const outcomes = [
 
 const whyParticipate = [
   'High-level curated dialogue',
-  'Cross-sector engagement',
   'Policy & industry insights',
   'Actionable outcomes',
+  'Certificates for all attendees',
 ]
 
 const programme = [
