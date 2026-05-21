@@ -42,7 +42,7 @@
           <div class="flex gap-4 pt-6 pb-6 md:pb-0">
             <button 
               @click="scrollTo('register')"
-              class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs rounded-lg hover:opacity-90 transition"
+              class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
             >
               Register
             </button>
@@ -67,14 +67,14 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <p class="text-xl md:text-2xl text-primary font-bold">
+          <p class="text-2xl md:text-2xl text-primary font-bold">
             10:30 AM CET<br/>2:00 PM IST
           </p>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Platform</p>
-          <p class="text-xl md:text-2xl text-primary font-bold">
+          <p class="text-2xl md:text-2xl text-primary font-bold">
             Virtual (Zoom)
           </p>
         </div>
