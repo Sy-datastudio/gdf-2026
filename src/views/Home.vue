@@ -72,16 +72,16 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Time</p>
-          <p class="text-4xl md:text-2xl text-primary font-bold">
+          <h3 class="text-4xl md:text-2xl text-primary font-bold">
             10:30 AM CET<br/>2:00 PM IST
-          </p>
+          </h3>
         </div>
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Platform</p>
-          <p class="text-4xl md:text-2xl text-primary font-bold">
+          <h3 class="text-4xl md:text-2xl text-primary font-bold">
             Virtual (Zoom)
-          </p>
+          </h3>
         </div>
 
       </div>
