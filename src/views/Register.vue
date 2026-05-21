@@ -76,10 +76,10 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
-          class="relative z-10 w-full flex justify-center"
+          class="relative z-10 w-72"
         >
           <button
-            class="w-full max-w-lg py-5 bg-primary text-black font-bold uppercase text-xs tracking-[0.25em] rounded-lg hover:opacity-90 transition"
+            class="w-full py-5 bg-primary text-black font-bold uppercase text-sm tracking-[0.3em] rounded-xl hover:opacity-90 transition"
           >
             Register Now
           </button>
