@@ -192,13 +192,8 @@
       </h2>
 
       <h3 class="text-5xl font-black text-white">
-        A multi-edition <span class="text-primary">decarbonization journey</span>
+        A Multi-Edition <span class="text-primary">Decarbonization Journey</span>
       </h3>
-
-      <p class="text-white/70 max-w-2xl mx-auto">
-        Edition 01 marks the beginning. The series expands into policy, aviation, and trade-linked carbon systems.
-      </p>
-    </div>
 
     <!-- TIMELINE -->
     <div class="relative">
@@ -223,7 +218,7 @@
 
         <!-- EDITION 02 -->
         <div class="flex flex-col items-center space-y-4 opacity-80">
-          <div class="w-3 h-3 rounded-full bg-white/30"></div>
+          <div class="w-3 h-3 rounded-full bg-white/50"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/50">
             Edition 02 — MNRE
@@ -236,7 +231,7 @@
 
         <!-- EDITION 03 -->
         <div class="flex flex-col items-center space-y-4 opacity-60">
-          <div class="w-3 h-3 rounded-full bg-white/20"></div>
+          <div class="w-3 h-3 rounded-full bg-white/40"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/40">
             Edition 03 — Aviation
@@ -245,7 +240,7 @@
 
         <!-- EDITION 04 -->
         <div class="flex flex-col items-center space-y-4 opacity-40">
-          <div class="w-3 h-3 rounded-full bg-white/10"></div>
+          <div class="w-3 h-3 rounded-full bg-white/30"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/30">
             Edition 04 — CBAM
