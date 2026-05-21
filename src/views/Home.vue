@@ -194,6 +194,7 @@
       <h3 class="text-5xl font-black text-white">
         A Multi-Edition <span class="text-primary">Decarbonization Journey</span>
       </h3>
+      </div>
 
     <!-- TIMELINE -->
     <div class="relative">
@@ -201,13 +202,13 @@
       <!-- vertical line -->
       <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2"></div>
 
-      <div class="space-y-16">
+      <div class="space-y-20">
 
         <!-- EDITION 01 (ACTIVE) -->
-        <div class="flex flex-col items-center space-y-4">
-          <div class="w-4 h-4 rounded-full bg-primary shadow-[0_0_20px_#1da282] animate-pulse"></div>
+        <div class="flex flex-col items-center space-y-6">
+          <div class="w-6 h-6 rounded-full bg-primary shadow-[0_0_20px_#1da282] animate-pulse"></div>
 
-          <p class="text-xs uppercase tracking-widest text-primary">
+          <p class="text-sm uppercase tracking-[0.2em] text-primary font-semibold">
             Edition 01 — Maritime
           </p>
 
@@ -217,8 +218,8 @@
         </div>
 
         <!-- EDITION 02 -->
-        <div class="flex flex-col items-center space-y-4 opacity-80">
-          <div class="w-3 h-3 rounded-full bg-white/50"></div>
+        <div class="flex flex-col items-center space-y-6 opacity-80">
+          <div class="w-5 h-5 rounded-full bg-white/50"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/50">
             Edition 02 — MNRE
@@ -230,8 +231,8 @@
         </div>
 
         <!-- EDITION 03 -->
-        <div class="flex flex-col items-center space-y-4 opacity-60">
-          <div class="w-3 h-3 rounded-full bg-white/40"></div>
+        <div class="flex flex-col items-center space-y-6 opacity-60">
+          <div class="w-5 h-5 rounded-full bg-white/40"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/40">
             Edition 03 — Aviation
@@ -239,8 +240,8 @@
         </div>
 
         <!-- EDITION 04 -->
-        <div class="flex flex-col items-center space-y-4 opacity-40">
-          <div class="w-3 h-3 rounded-full bg-white/30"></div>
+        <div class="flex flex-col items-center space-y-6 opacity-40">
+          <div class="w-5 h-5 rounded-full bg-white/30"></div>
 
           <p class="text-xs uppercase tracking-widest text-white/30">
             Edition 04 — CBAM
