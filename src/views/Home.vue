@@ -112,7 +112,7 @@
 
         <div class="text-center space-y-4">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Context</h2>
-          <h3 class="text-5xl font-black text-white">
+          <h3 class="text-5xl font-bold text-white">
             Decarbonization is entering a <span class="text-primary">compliance-driven phase</span>
           </h3>
         </div>
@@ -137,7 +137,7 @@
 
         <div class="text-center space-y-3 max-w-2xl mx-auto">
           <h2 class="text-xs tracking-[0.4em] text-primary uppercase">Agenda</h2>
-          <h3 class="text-5xl font-black text-white">Curated Discussion</h3>
+          <h3 class="text-5xl font-bold text-white">Curated Discussion</h3>
         </div>
 
         <div class="max-w-3xl mx-auto">
@@ -191,7 +191,7 @@
         The Series
       </h2>
 
-      <h3 class="text-5xl font-black text-white">
+      <h3 class="text-5xl font-bold text-white">
         A Multi-Edition <span class="text-primary">Decarbonization Journey</span>
       </h3>
       </div>
