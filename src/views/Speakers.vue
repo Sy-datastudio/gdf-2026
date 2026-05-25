@@ -8,7 +8,7 @@
         <div class="flex items-center gap-3">
           <span class="w-12 h-[1px] bg-primary"></span>
           <span class="text-xs font-bold uppercase tracking-[0.3em] text-primary">
-            Global Decarbonization Forum 2026
+            Maritime Decarbonization Forum 2026
           </span>
         </div>
 
@@ -185,15 +185,15 @@ const outcomes = [
 ]
 
 const whyParticipate = [
-  'High-level curated dialogue',
+  'Curated industry dialogue',
   'Policy & industry insights',
   'Actionable outcomes',
-  'Certificates for all attendees',
+  'High-value industry network',
 ]
 
 const programme = [
-  { time: '10 min', label: 'Context: Regulatory and economic pressure' },
+  { time: '5 min', label: 'Context: Regulatory and economic pressure' },
   { time: '45 min', label: 'Discussion: Turning constraint into competitive edge' },
-  { time: '5 min', label: 'Key takeaways and closing reflections' },
+  { time: '10 min', label: 'Q/A and closing reflections' },
 ]
 </script>
