@@ -67,7 +67,7 @@
 
         <div>
           <p class="text-xs tracking-[0.6em] text-white/70 uppercase">Date</p>
-          <h4 class="text-4xl font-bold text-primary">June 11, 2026</h4>
+          <h4 class="text-4xl font-bold text-primary">June 17, 2026</h4>
         </div>
 
         <div>
@@ -93,7 +93,7 @@
 
         <h2 class="text-xs tracking-[0.4em] text-primary uppercase">About</h2>
 
-        <h3 class="text-4xl font-bold text-white">
+        <h3 class="text-5xl font-bold text-white">
           A platform for <span class="text-primary">strategic Maritime dialogue</span>
         </h3>
 
