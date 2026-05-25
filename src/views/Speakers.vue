@@ -106,7 +106,7 @@
     <section class="py-32 px-6">
       <div class="max-w-7xl mx-auto">
 
-        <h3 class="text-4xl font-bold mb-12 text-center text-white">
+        <h3 class="text-5xl font-bold mb-12 text-center text-white">
           Session Timeline
         </h3>
 
@@ -147,7 +147,7 @@
     <section class="py-40 px-6 text-center wave-pattern">
       <div class="space-y-8">
 
-        <h3 class="text-4xl font-black text-white">
+        <h3 class="text-4xl font-bold text-white">
           For Partnerships or Participation Inquiries
         </h3>
 
