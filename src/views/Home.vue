@@ -38,21 +38,35 @@
             </div>
           </div>
 
-          <!-- CTA -->
-          <div class="flex gap-4 pt-6 pb-6 md:pb-0">
-            <a 
-  href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button 
-    class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
+<div class="flex flex-col sm:flex-row gap-4 pt-6 pb-6 md:pb-0">
+
+  <!-- REGISTER -->
+  <a 
+    href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
+    target="_blank"
+    rel="noopener noreferrer"
   >
-    Register
-  </button>
-</a>
-          </div>
-        </div>
+    <button 
+      class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
+    >
+      Register
+    </button>
+  </a>
+
+  <!-- EXPRESS INTEREST (SPEAKERS) -->
+  <a 
+    href="https://YOUR-SPEAKER-FORM-LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button 
+      class="px-12 py-4 border border-primary text-primary font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-primary/10 transition"
+    >
+      Express Interest
+    </button>
+  </a>
+
+</div>
 
         <div class="hidden md:flex justify-end">
           <img src="/ship-Emissions-image.jpeg" class="rounded-xl opacity-90 shadow-2xl border border-white/10 w-[85%]"/>
