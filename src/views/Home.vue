@@ -42,7 +42,7 @@
 
   <!-- REGISTER -->
 <a 
-  href="..."
+  href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform"
   class="px-10 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition inline-block text-center"
 >
   Register
