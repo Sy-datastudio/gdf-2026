@@ -9,7 +9,7 @@
     </div>
 
     <!-- HERO -->
-    <div class="relative min-h-screen md:min-h-[95vh] flex items-center px-6 py-16 md:py-0"">
+    <div class="relative min-h-screen md:min-h-[95vh] flex items-center px-6 py-16 md:py-0">
       <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
 
         <div class="space-y-8">
@@ -41,17 +41,12 @@
 <div class="flex flex-col sm:flex-row gap-4 pt-6 pb-6 md:pb-0">
 
   <!-- REGISTER -->
-  <a 
-    href="https://docs.google.com/forms/d/e/1FAIpQLScvXdADvhJyRNIwykhByYZWqiLNIebW9--L3MNbZrsk8BzeWw/viewform?usp=publish-editor"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <button 
-      class="px-12 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition"
-    >
-      Register
-    </button>
-  </a>
+<a 
+  href="..."
+  class="px-10 py-4 bg-primary text-black font-bold uppercase text-xs tracking-widest rounded-lg hover:opacity-90 transition inline-block text-center"
+>
+  Register
+</a>
 
   <!-- EXPRESS INTEREST (SPEAKERS) -->
   <a 
@@ -65,7 +60,7 @@
       Express Interest
     </button>
   </a>
-
+</div>
 </div>
 
         <div class="hidden md:flex justify-end">
